@@ -10,6 +10,7 @@ const config: Config = {
   description: "Demo showcasing Vike",
 
   extends: [vikeReact],
+  prerender: true,
 };
 
 export default config;
