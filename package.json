@@ -2,7 +2,8 @@
   "name": "library",
   "type": "module",
   "imports": {
-    "#books/*": "./books/*"
+    "#books/*": "./books/*",
+    "#util": "./util/index.ts"
   },
   "scripts": {
     "dev": "vike dev",
