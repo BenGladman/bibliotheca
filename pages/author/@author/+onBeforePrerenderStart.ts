@@ -1,14 +1,8 @@
-import { parseBookPath } from "#util";
+import { getBooks } from "#util";
 
 export async function onBeforePrerenderStart() {
-  const books = import.meta.glob("#books/*/*.md");
-
-  const authorUrls = new Set(
-    Object.keys(books).map((path) => {
-      const { author } = parseBookPath(path);
-      return `/author/${author}`;
-    }),
-  );
+  const books = await getBooks();
+  const authorUrls = new Set(books.map((b) => b.authorUrl));
 
   return [...authorUrls];
 }

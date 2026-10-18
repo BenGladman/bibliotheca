@@ -1,31 +1,25 @@
-import type { PageContextServer } from "vike/types";
+import { getBooks } from "#util";
 import { useConfig } from "vike-react/useConfig";
 import { render } from "vike/abort";
-import { MarkdownModule, parseBookPath } from "#util";
+import type { PageContextServer } from "vike/types";
 
 export type Data = Awaited<ReturnType<typeof data>>;
 
 export async function data(pageContext: PageContextServer) {
   const config = useConfig();
 
-  const booksImport = import.meta.glob<MarkdownModule>("#books/*/*.md");
+  const books = await getBooks();
+  const filteredBooks = books.filter((b) => b.authorUrl === pageContext.urlPathname);
 
-  const bookModules: MarkdownModule[] = [];
-
-  for (const [path, importModule] of Object.entries(booksImport)) {
-    if (parseBookPath(path).author === pageContext.routeParams.author) {
-      const bookModule = await importModule();
-      bookModules.push(bookModule);
-    }
-  }
-
-  if (bookModules.length === 0) {
+  if (filteredBooks.length === 0) {
     throw render(404);
   }
 
+  filteredBooks.sort((a, b) => a.year - b.year);
+
   config({
-    title: `${bookModules[0].attributes.author}`,
+    title: `${filteredBooks[0].authorFullname}`,
   });
 
-  return { attributes: bookModules[0].attributes };
+  return { books: filteredBooks };
 }

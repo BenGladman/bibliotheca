@@ -1,6 +1,7 @@
 export interface MarkdownAttributes {
   title: string;
   author: string;
+  year: number;
   tags: string[];
 }
 
