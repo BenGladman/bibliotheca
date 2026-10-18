@@ -1,5 +1,5 @@
 {
-  "name": "library",
+  "name": "bibliotheca",
   "type": "module",
   "imports": {
     "#books/*": "./books/*",
