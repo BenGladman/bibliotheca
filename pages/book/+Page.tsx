@@ -9,10 +9,11 @@ export default function Page() {
     <>
       <ul>
         {books.map((b) => (
-          <li key={b.url}>
-            <Link href={b.url}>
-              {b.title} – {b.authorFullname} ({b.year})
-            </Link>
+          <li key={b.titleUrl}>
+            <Link href={b.titleUrl}>{b.title}</Link>
+            <span> – </span>
+            <Link href={b.authorUrl}>{b.authorFullname}</Link>
+            <span> ({b.year})</span>
           </li>
         ))}
       </ul>

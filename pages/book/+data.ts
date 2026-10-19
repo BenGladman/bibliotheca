@@ -16,7 +16,8 @@ export async function data() {
         title: b.title,
         authorFullname: b.authorFullname,
         year: b.year,
-        url: b.titleUrl,
+        titleUrl: b.titleUrl,
+        authorUrl: b.authorUrl,
       },
     ]),
   );
