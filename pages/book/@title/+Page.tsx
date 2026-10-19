@@ -3,7 +3,7 @@ import type { Data } from "./+data.js";
 import { Link } from "#components";
 
 export default function Page() {
-  const { title, html, authorFullname, authorUrl, year, tags } = useData<Data>();
+  const { title, html, authorFullname, authorUrl, series, seriesUrl, year, tags } = useData<Data>();
 
   return (
     <>
@@ -14,6 +14,13 @@ export default function Page() {
       </h2>
 
       <div dangerouslySetInnerHTML={{ __html: html }} />
+
+      {seriesUrl && (
+        <p className="flex gap-2">
+          <span>Series:</span>
+          <Link href={seriesUrl}>{series}</Link>
+        </p>
+      )}
 
       <p className="flex gap-2 flex-wrap">
         <span>Tags:</span>

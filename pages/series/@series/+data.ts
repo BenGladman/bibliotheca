@@ -1,0 +1,25 @@
+import { getBooks } from "#util";
+import { useConfig } from "vike-react/useConfig";
+import { render } from "vike/abort";
+import type { PageContextServer } from "vike/types";
+
+export type Data = Awaited<ReturnType<typeof data>>;
+
+export async function data(pageContext: PageContextServer) {
+  const config = useConfig();
+
+  const books = await getBooks();
+  const filteredBooks = books.filter((b) => b.seriesUrl === pageContext.urlPathname);
+
+  if (filteredBooks.length === 0) {
+    throw render(404);
+  }
+
+  filteredBooks.sort((a, b) => a.year - b.year);
+
+  config({
+    title: `${filteredBooks[0].series}`,
+  });
+
+  return { books: filteredBooks };
+}

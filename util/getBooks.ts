@@ -9,6 +9,8 @@ interface Book {
   authorSort: string;
   authorFullname: string;
   authorUrl: string;
+  series?: string;
+  seriesUrl?: string;
   year: number;
   tags: Array<{ tag: string; url: string }>;
   html: string;
@@ -31,6 +33,8 @@ async function getBooksFn(): Promise<Book[]> {
       authorSort: attributes.author,
       authorFullname,
       authorUrl: `/author/${kebabCase(authorFullname)}`,
+      series: attributes.series,
+      seriesUrl: attributes.series && `/series/${kebabCase(attributes.series)}`,
       year: attributes.year,
       tags: attributes.tags.map((tag) => ({
         tag,
