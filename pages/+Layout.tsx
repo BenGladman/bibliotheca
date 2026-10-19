@@ -17,7 +17,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function Sidebar({ children }: { children: React.ReactNode }) {
-  return <div className="p-5 flex flex-col shrink-0 border-r-2 border-r-gray-30">{children}</div>;
+  return (
+    <div className="p-5 shrink-0 border-r border-r-gray-30">
+      <div className="sticky top-0 flex flex-col ">{children}</div>
+    </div>
+  );
 }
 
 function Content({ children }: { children: React.ReactNode }) {

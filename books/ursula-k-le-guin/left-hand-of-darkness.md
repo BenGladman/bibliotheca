@@ -5,5 +5,3 @@ year: 1969
 tags:
   - SciFi
 ---
-
-Some text

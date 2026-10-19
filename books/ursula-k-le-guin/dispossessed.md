@@ -5,5 +5,3 @@ year: 1974
 tags:
   - SciFi
 ---
-
-Some text

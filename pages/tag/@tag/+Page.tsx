@@ -12,9 +12,10 @@ export default function Page() {
       <ol>
         {books.map((b) => (
           <li key={b.title}>
-            <Link href={b.titleUrl}>
-              {b.title} – {b.authorFullname} ({b.year})
-            </Link>
+            <Link href={b.titleUrl}>{b.title}</Link>
+            <span> – </span>
+            <Link href={b.authorUrl}>{b.authorFullname}</Link>
+            <span> ({b.year})</span>
           </li>
         ))}
       </ol>
