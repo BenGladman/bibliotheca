@@ -9,6 +9,7 @@ export async function data(pageContext: PageContextServer) {
   const config = useConfig();
 
   const books = await getBooks();
+  console.log("xxxxx", pageContext.urlPathname);
   const filteredBooks = books.filter((b) => b.authorUrl === pageContext.urlPathname);
 
   if (filteredBooks.length === 0) {

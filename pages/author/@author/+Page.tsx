@@ -1,5 +1,6 @@
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.js";
+import { Link } from "#components";
 
 export default function Page() {
   const { books } = useData<Data>();
@@ -11,9 +12,9 @@ export default function Page() {
       <ol>
         {books.map((b) => (
           <li key={b.title}>
-            <a href={b.titleUrl}>
+            <Link href={b.titleUrl}>
               {b.title} ({b.year})
-            </a>
+            </Link>
           </li>
         ))}
       </ol>

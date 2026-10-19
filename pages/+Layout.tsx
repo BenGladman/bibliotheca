@@ -1,4 +1,4 @@
-import { Link } from "../components/Link";
+import { Link } from "#components";
 import "./tailwind.css";
 import logoUrl from "../assets/logo.svg";
 
@@ -31,9 +31,9 @@ function Content({ children }: { children: React.ReactNode }) {
 function Logo() {
   return (
     <div className={"p-5 mb-2"}>
-      <a href="/">
+      <Link href="/">
         <img src={logoUrl} height={64} width={64} alt="logo" />
-      </a>
+      </Link>
     </div>
   );
 }

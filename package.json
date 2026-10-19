@@ -3,6 +3,7 @@
   "type": "module",
   "imports": {
     "#books/*": "./books/*",
+    "#components": "./components/index.ts",
     "#util": "./util/index.ts"
   },
   "scripts": {

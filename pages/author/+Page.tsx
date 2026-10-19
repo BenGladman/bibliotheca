@@ -1,5 +1,6 @@
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.js";
+import { Link } from "#components";
 
 export default function Page() {
   const { authors } = useData<Data>();
@@ -9,7 +10,7 @@ export default function Page() {
       <ul>
         {authors.map((a) => (
           <li key={a.url}>
-            <a href={a.url}>{a.fullname}</a>
+            <Link href={a.url}>{a.fullname}</Link>
           </li>
         ))}
       </ul>
