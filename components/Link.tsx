@@ -5,7 +5,7 @@ export function Link({ href, children }: { href: string; children: string }) {
   const { urlPathname } = pageContext;
   const isActive = href === "/" ? urlPathname === href : urlPathname.startsWith(href);
   return (
-    <a href={href} className={isActive ? "is-active" : undefined}>
+    <a href={href} className={isActive ? "font-bold" : undefined}>
       {children}
     </a>
   );
