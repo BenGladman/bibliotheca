@@ -11,6 +11,15 @@ const config: Config = {
 
   extends: [vikeReact],
   prerender: true,
+  meta: {
+    Page: {
+      env: {
+        // HTML-only for all pages
+        server: true,
+        client: false,
+      },
+    },
+  },
 };
 
 export default config;
