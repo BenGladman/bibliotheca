@@ -15,6 +15,7 @@ export interface Book {
   decade: string;
   decadeUrl: string;
   tags: Array<{ tag: string; url: string }>;
+  read: Array<{ year: number; url: string }>;
   html: string;
 }
 
@@ -46,6 +47,11 @@ async function getBooksFn(): Promise<Book[]> {
         tag,
         url: `/tag/${kebabCase(tag)}`,
       })),
+      read:
+        attributes.read?.map((year) => ({
+          year,
+          url: `/read/${year}`,
+        })) ?? [],
       html,
     };
   });

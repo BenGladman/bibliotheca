@@ -1,7 +1,6 @@
 import { useData } from "vike-react/useData";
-import type { Data } from "./+data.js";
-import { Link } from "#components";
 import { BookList } from "../../../components/BookList.js";
+import type { Data } from "./+data.js";
 
 export default function Page() {
   const { tag, books } = useData<Data>();
@@ -9,7 +8,6 @@ export default function Page() {
   return (
     <>
       <h1>{tag}</h1>
-
       <BookList books={books} />
     </>
   );

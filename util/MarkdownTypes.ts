@@ -4,6 +4,7 @@ export interface MarkdownAttributes {
   series?: string;
   year: number;
   tags: string[];
+  read?: number[];
 }
 
 export interface MarkdownModule {

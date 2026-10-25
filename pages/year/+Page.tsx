@@ -10,7 +10,7 @@ export default function Page() {
       <ul>
         {decades.map((decade) => (
           <li key={decade.decade}>
-            <Link href={decade.url}>{decade.decade}</Link>
+            <Link href={decade.url}>Published in {decade.decade}</Link>
           </li>
         ))}
       </ul>
