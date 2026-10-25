@@ -8,26 +8,14 @@ export async function data() {
 
   const allBooks = await getBooks();
 
-  const booksMap = new Map(
-    allBooks.map((b) => [
-      b.titleUrl,
-      {
-        sort: b.titleSort,
-        title: b.title,
-        authorFullname: b.authorFullname,
-        year: b.year,
-        titleUrl: b.titleUrl,
-        authorUrl: b.authorUrl,
-      },
-    ]),
-  );
+  const booksMap = new Map(allBooks.map((b) => [b.titleUrl, b]));
 
   config({
     title: "Books",
   });
 
   const books = [...booksMap.values()];
-  books.sort((a, b) => a.sort.localeCompare(b.sort));
+  books.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
 
   return { books };
 }

@@ -1,6 +1,7 @@
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.js";
 import { Link } from "#components";
+import { BookList } from "../../../components/BookList.js";
 
 export default function Page() {
   const { tag, books } = useData<Data>();
@@ -9,16 +10,7 @@ export default function Page() {
     <>
       <h1>{tag}</h1>
 
-      <ol>
-        {books.map((b) => (
-          <li key={b.title}>
-            <Link href={b.titleUrl}>{b.title}</Link>
-            <span> – </span>
-            <Link href={b.authorUrl}>{b.authorFullname}</Link>
-            <span> ({b.year})</span>
-          </li>
-        ))}
-      </ol>
+      <BookList books={books} />
     </>
   );
 }

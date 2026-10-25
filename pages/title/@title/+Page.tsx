@@ -3,28 +3,31 @@ import type { Data } from "./+data.js";
 import { Link } from "#components";
 
 export default function Page() {
-  const { title, html, authorFullname, authorUrl, series, seriesUrl, year, tags } = useData<Data>();
+  const book = useData<Data>();
 
   return (
     <>
-      <h1>{title}</h1>
+      <h1>{book.title}</h1>
 
       <h2>
-        <Link href={authorUrl}>{authorFullname}</Link> ({year})
+        <Link href={book.authorUrl}>{book.authorFullname}</Link>
+        <span> (</span>
+        <Link href={book.decadeUrl}>{book.year}</Link>
+        <span>)</span>
       </h2>
 
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: book.html }} />
 
-      {seriesUrl && (
+      {book.seriesUrl && (
         <p className="flex gap-2">
           <span>Series:</span>
-          <Link href={seriesUrl}>{series}</Link>
+          <Link href={book.seriesUrl}>{book.series}</Link>
         </p>
       )}
 
       <p className="flex gap-2 flex-wrap">
         <span>Tags:</span>
-        {tags.map((tag) => (
+        {book.tags.map((tag) => (
           <Link key={tag.tag} href={tag.url}>
             {tag.tag}
           </Link>

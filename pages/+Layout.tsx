@@ -8,8 +8,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Sidebar>
         <Logo />
         <Link href="/author">Authors</Link>
-        <Link href="/book">Books</Link>
+        <Link href="/title">Books</Link>
         <Link href="/series">Series</Link>
+        <Link href="/year">Years</Link>
         <Link href="/tag">Tags</Link>
       </Sidebar>
       <Content>{children}</Content>
