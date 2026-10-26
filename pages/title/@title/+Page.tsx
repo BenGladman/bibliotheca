@@ -35,6 +35,17 @@ export default function Page() {
           ))}
         </p>
       )}
+
+      {book.read.length > 0 && (
+        <p className="flex gap-2 flex-wrap">
+          <span>Read:</span>
+          {book.read.map((read) => (
+            <Link key={read.year} href={read.url}>
+              {read.year}
+            </Link>
+          ))}
+        </p>
+      )}
     </>
   );
 }
