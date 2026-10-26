@@ -12,7 +12,7 @@ export default function Page() {
       <h2>
         <Link href={book.authorUrl}>{book.authorFullname}</Link>
         <span> (</span>
-        <Link href={book.decadeUrl}>{book.year}</Link>
+        <Link href={book.decadeUrl}>{book.published}</Link>
         <span>)</span>
       </h2>
 
@@ -25,14 +25,16 @@ export default function Page() {
         </p>
       )}
 
-      <p className="flex gap-2 flex-wrap">
-        <span>Tags:</span>
-        {book.tags.map((tag) => (
-          <Link key={tag.tag} href={tag.url}>
-            {tag.tag}
-          </Link>
-        ))}
-      </p>
+      {book.tags.length > 0 && (
+        <p className="flex gap-2 flex-wrap">
+          <span>Tags:</span>
+          {book.tags.map((tag) => (
+            <Link key={tag.tag} href={tag.url}>
+              {tag.tag}
+            </Link>
+          ))}
+        </p>
+      )}
     </>
   );
 }

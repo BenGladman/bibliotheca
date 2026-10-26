@@ -1,7 +1,6 @@
 ---
 title: Middlemarch, A Study of Provincial Life
 author: Eliot, George
-year: 1872
-tags: []
-read: [2022]
+published: 1872
+read: 2022
 ---

@@ -15,7 +15,7 @@ export async function data() {
   });
 
   const reads = [...tagsMap.values()];
-  reads.sort((a, b) => b.year - a.year);
+  reads.sort((a, b) => b.description.localeCompare(a.description));
 
   return { reads };
 }

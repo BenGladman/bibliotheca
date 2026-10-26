@@ -7,10 +7,10 @@ export default function Page() {
 
   return (
     <>
-      <ul>
+      <ul className="tabular-nums">
         {reads.map((read) => (
-          <li key={read.year}>
-            <Link href={read.url}>Read in {read.year}</Link>
+          <li key={read.description}>
+            <Link href={read.url}>{read.description}</Link>
           </li>
         ))}
       </ul>

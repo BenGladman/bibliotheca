@@ -1,7 +1,6 @@
 ---
 title: Gaining Ground
 author: Barfoot, Joan
-year: 1980
-tags: []
-read: [2026]
+published: 1980
+read: 2026
 ---

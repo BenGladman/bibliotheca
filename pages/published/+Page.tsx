@@ -7,10 +7,10 @@ export default function Page() {
 
   return (
     <>
-      <ul>
+      <ul className="tabular-nums">
         {decades.map((decade) => (
-          <li key={decade.decade}>
-            <Link href={decade.url}>Published in {decade.decade}</Link>
+          <li key={decade.description}>
+            <Link href={decade.url}>{decade.description}</Link>
           </li>
         ))}
       </ul>

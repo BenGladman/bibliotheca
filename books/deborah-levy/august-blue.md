@@ -1,7 +1,6 @@
 ---
 title: August Blue
 author: Levi, Deborah
-year: 2023
-tags: []
-read: [2025]
+published: 2023
+read: 2025
 ---

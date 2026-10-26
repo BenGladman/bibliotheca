@@ -22,7 +22,7 @@ export function BookList({ books, isAuthorPage, isYearPage }: BookListProps) {
           )}
 
           <span> (</span>
-          {isYearPage ? b.year : <Link href={b.decadeUrl}>{b.year}</Link>}
+          {isYearPage ? b.published : <Link href={b.decadeUrl}>{b.published}</Link>}
           <span>)</span>
         </li>
       ))}

@@ -1,7 +1,7 @@
 ---
 title: Wuthering Heights
 author: Brontë, Emily
-year: 1847
+published: 1847
 tags: [Gothic]
-read: [2024]
+read: 2024
 ---

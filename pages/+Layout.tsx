@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Link href="/author">Authors</Link>
         <Link href="/title">Books</Link>
         <Link href="/series">Series</Link>
-        <Link href="/year">Years</Link>
+        <Link href="/published">Published</Link>
         <Link href="/tag">Tags</Link>
         <Link href="/read">Read</Link>
       </Sidebar>

@@ -9,15 +9,21 @@ export async function data() {
   const books = await getBooks();
 
   const decadesMap = new Map(
-    books.map((b) => [b.decadeUrl, { url: b.decadeUrl, decade: b.decade }]),
+    books.map((b) => [
+      b.decadeUrl,
+      {
+        url: b.decadeUrl,
+        description: b.decadeDescription,
+      },
+    ]),
   );
 
   config({
-    title: "Years",
+    title: "Published",
   });
 
   const decades = [...decadesMap.values()];
-  decades.sort((a, b) => a.decade.localeCompare(b.decade));
+  decades.sort((a, b) => a.description.localeCompare(b.description));
 
   return { decades };
 }

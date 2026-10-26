@@ -15,7 +15,7 @@ export async function data(pageContext: PageContextServer) {
     throw render(404);
   }
 
-  filteredBooks.sort((a, b) => a.year - b.year);
+  filteredBooks.sort((a, b) => a.published - b.published);
 
   config({
     title: `${filteredBooks[0].series}`,

@@ -1,9 +1,9 @@
 ---
 title: Rebecca
 author: Du Maurier, Daphne
-year: 1938
+published: 1938
 tags: [Gothic, Crime]
-read: [2026]
+read: 2026
 ---
 
 The narrator marries a very rich man, Maxim, whom she meets while she’s working as a companion for a rich woman. The rich woman is a gossip and a figure of fun but we don’t get to see much of her. The narrator is exasperated by her, and eager to move on from her current position which explains why she’s so easily swept away by Maxim.

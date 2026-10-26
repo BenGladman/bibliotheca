@@ -17,11 +17,13 @@ export async function data(pageContext: PageContextServer) {
 
   filteredBooks.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
 
-  const year = filteredBooks[0].read.find((t) => t.url === pageContext.urlPathname)?.year;
+  const readDescription = filteredBooks[0].read.find(
+    (t) => t.url === pageContext.urlPathname,
+  )?.description;
 
   config({
-    title: `Read in ${year}`,
+    title: `{readDescription}`,
   });
 
-  return { year, books: filteredBooks };
+  return { readDescription, books: filteredBooks };
 }

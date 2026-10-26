@@ -11,11 +11,11 @@ export interface Book {
   authorUrl: string;
   series?: string;
   seriesUrl?: string;
-  year: number;
-  decade: string;
+  published: number;
+  decadeDescription: string;
   decadeUrl: string;
   tags: Array<{ tag: string; url: string }>;
-  read: Array<{ year: number; url: string }>;
+  read: Array<{ description: string; url: string }>;
   html: string;
 }
 
@@ -29,7 +29,8 @@ async function getBooksFn(): Promise<Book[]> {
 
     const authorFullname = attributes.author.split(", ").reverse().join(" ");
 
-    const decade = `${attributes.year.toString().slice(0, 3)}0s`;
+    const decade3 = attributes.published.toString().slice(0, 3);
+    const decadeDescription = `Published ${decade3}0–${decade3}9`;
 
     return {
       title: attributes.title,
@@ -40,18 +41,17 @@ async function getBooksFn(): Promise<Book[]> {
       authorUrl: `/author/${kebabCase(authorFullname)}`,
       series: attributes.series,
       seriesUrl: attributes.series && `/series/${kebabCase(attributes.series)}`,
-      year: attributes.year,
-      decade,
-      decadeUrl: `/year/${decade}`,
-      tags: attributes.tags.map((tag) => ({
+      published: attributes.published,
+      decadeDescription: decadeDescription,
+      decadeUrl: `/published/${decade3}0s`,
+      tags: toArray(attributes.tags).map((tag) => ({
         tag,
         url: `/tag/${kebabCase(tag)}`,
       })),
-      read:
-        attributes.read?.map((year) => ({
-          year,
-          url: `/read/${year}`,
-        })) ?? [],
+      read: toArray(attributes.read).map((year) => ({
+        description: `Read in ${year}`,
+        url: `/read/${year}`,
+      })),
       html,
     };
   });
@@ -60,3 +60,15 @@ async function getBooksFn(): Promise<Book[]> {
 }
 
 export const getBooks = memoize(getBooksFn);
+
+function toArray<T>(value: T | T[] | undefined): T[] {
+  if (Array.isArray(value)) {
+    return value;
+  }
+
+  if (value) {
+    return [value];
+  }
+
+  return [];
+}

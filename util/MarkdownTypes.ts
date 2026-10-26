@@ -2,9 +2,9 @@ export interface MarkdownAttributes {
   title: string;
   author: string;
   series?: string;
-  year: number;
-  tags: string[];
-  read?: number[];
+  published: number;
+  tags?: string | string[];
+  read?: number | number[];
 }
 
 export interface MarkdownModule {

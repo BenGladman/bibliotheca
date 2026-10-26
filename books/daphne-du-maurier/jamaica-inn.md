@@ -1,9 +1,9 @@
 ---
 title: Jamaica Inn
 author: Du Maurier, Daphne
-year: 1936
+published: 1936
 tags: [Gothic]
-read: [2026]
+read: 2026
 ---
 
 Mary goes to Bodmin Moor to live with her aunt and uncle after her mum dies. There is lots of awful weather. Her uncle Joss is a huge and terrible man but also he is haunted by the terrors he has perpetrated, especially when he is drunk which happens regularly. Her aunt is barely a shadow with no agency.
