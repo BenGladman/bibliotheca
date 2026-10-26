@@ -22,7 +22,7 @@ export async function data(pageContext: PageContextServer) {
   )?.description;
 
   config({
-    title: `{readDescription}`,
+    title: readDescription,
   });
 
   return { readDescription, books: filteredBooks };

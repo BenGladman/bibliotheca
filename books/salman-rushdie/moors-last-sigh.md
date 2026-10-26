@@ -5,4 +5,4 @@ published: 1995
 tags: [Magical Realism, India]
 ---
 
-A family saga, lots of characters, many eccentric, but never annoyingly so. Lots of wordplay and fantastical subplots. Extremely entertaining and you feel clever for reading it.
+A family saga, lots of characters, many eccentric, but I never found them annoyingly so. There is lots of wordplay and fantastical subplots. It’s complex but extremely entertaining.
