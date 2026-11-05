@@ -2,7 +2,7 @@
 title: Oranges are not the Only Fruit
 author: Winterson, Jeanette
 published: 1985
-tags: [Semi Autobiographical]
+tags: Semi Autobiographical
 read: 2026
 ---
 

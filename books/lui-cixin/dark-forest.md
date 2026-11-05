@@ -4,5 +4,5 @@ author: Lui Cixin
 series: Remembrance of Earth’s Past
 published: 2008
 tags: [SciFi]
-read: 2025
+read: 2026
 ---

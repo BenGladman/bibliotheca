@@ -1,6 +1,6 @@
 ---
 title: The Stand
-author: Kind, Stephen
+author: King, Stephen
 tags: [Post-Apocalyptic, Fantasy]
 published: 1978
 read: 2022
