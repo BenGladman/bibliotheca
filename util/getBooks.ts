@@ -25,7 +25,7 @@ async function getBooksFn(): Promise<Book[]> {
   const bookPromises = Object.values(importMap).map(async (importBook): Promise<Book> => {
     const { attributes, html } = await importBook();
 
-    const titleSort = attributes.title.replace(/^(?:the|a) /gi, "");
+    const titleSort = attributes.title.replace(/^(the|a|an)?\W+/gi, "");
 
     const authorFullname = attributes.author.split(", ").reverse().join(" ");
 
