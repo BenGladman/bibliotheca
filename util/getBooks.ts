@@ -36,22 +36,22 @@ async function getBooksFn(): Promise<Book[]> {
     return {
       title: attributes.title,
       titleSort,
-      titleUrl: `/title/${kebabCase(attributes.title)}`,
+      titleUrl: `/title/${urlCase(attributes.title)}`,
       authorSort: attributes.author,
       authorFullname,
-      authorUrl: `/author/${kebabCase(authorFullname)}`,
+      authorUrl: `/author/${urlCase(authorFullname)}`,
       series: attributes.series,
-      seriesUrl: attributes.series && `/series/${kebabCase(attributes.series)}`,
+      seriesUrl: attributes.series && `/series/${urlCase(attributes.series)}`,
       published: attributes.published,
       decadeDescription: decadeDescription,
       decadeUrl: `/published/${decade3}0s`,
       tags: toArray(attributes.tags).map((tag) => ({
         tag,
-        url: `/tag/${kebabCase(tag)}`,
+        url: `/tag/${urlCase(tag)}`,
       })),
       locations: toArray(attributes.location).map((location) => ({
         location,
-        url: `/location/${kebabCase(location)}`,
+        url: `/location/${urlCase(location)}`,
       })),
       read: toArray(attributes.read).map((year) => ({
         year,
@@ -77,4 +77,12 @@ function toArray<T>(value: T | T[] | undefined): T[] {
   }
 
   return [];
+}
+
+function urlCase(value: string) {
+  const lcValueWithDiacriticsRemoved = value
+    .normalize("NFD")
+    .toLowerCase()
+    .replace(/[^a-z1-9\- ]/gu, "");
+  return kebabCase(lcValueWithDiacriticsRemoved);
 }
