@@ -6,6 +6,7 @@ export interface Book {
   title: string;
   titleSort: string;
   titleUrl: string;
+  titleFirstLetter: string;
   authorSort: string;
   authorFullname: string;
   authorUrl: string;
@@ -37,6 +38,7 @@ async function getBooksFn(): Promise<Book[]> {
       title: attributes.title,
       titleSort,
       titleUrl: `/title/${urlCase(attributes.title)}`,
+      titleFirstLetter: urlCase(titleSort)[0].toUpperCase(),
       authorSort: attributes.author,
       authorFullname,
       authorUrl: `/author/${urlCase(authorFullname)}`,
@@ -62,7 +64,10 @@ async function getBooksFn(): Promise<Book[]> {
     };
   });
 
-  return Promise.all(bookPromises);
+  const books = await Promise.all(bookPromises);
+  books.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
+
+  return books;
 }
 
 export const getBooks = memoize(getBooksFn);

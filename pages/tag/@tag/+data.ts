@@ -15,8 +15,6 @@ export async function data(pageContext: PageContextServer) {
     throw render(404);
   }
 
-  filteredBooks.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
-
   const tag = filteredBooks[0].tags.find((t) => t.url === pageContext.urlPathname)?.tag;
 
   config({

@@ -15,7 +15,6 @@ export async function data() {
   });
 
   const books = [...booksMap.values()];
-  books.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
 
   return { books };
 }

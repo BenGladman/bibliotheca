@@ -8,7 +8,6 @@
   --color-blue-80: oklch(80% 50% 260);
 
   --color-gray-90: oklch(90% 4% 260);
-  --color-gray-30: oklch(30% 4% 260);
   --color-gray-20: oklch(20% 4% 260);
 }
 
@@ -30,5 +29,20 @@
   }
   a {
     @apply text-blue-80 hover:underline;
+  }
+  table {
+    @apply -mx-2;
+  }
+  tr:nth-child(even) {
+    @apply bg-gray-90/5;
+  }
+  th {
+    @apply px-2 py-1 text-amber-80 bg-gray-20 font-bold;
+    vertical-align: top;
+    text-align: left;
+  }
+  td {
+    @apply px-2 py-1;
+    vertical-align: top;
   }
 }

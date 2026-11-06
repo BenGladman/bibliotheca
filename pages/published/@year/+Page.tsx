@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <h1>{books[0].decadeDescription}</h1>
-      <BookList books={books} isYearPage />
+      <BookList books={books} isYearPage getSectionName={(b) => `${b.published}`} />
     </>
   );
 }
