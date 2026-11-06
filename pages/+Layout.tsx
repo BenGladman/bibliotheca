@@ -12,6 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Link href="/series">Series</Link>
         <Link href="/published">Published</Link>
         <Link href="/tag">Tags</Link>
+        <Link href="/location">Locations</Link>
         <Link href="/read">Read</Link>
       </Sidebar>
       <Content>{children}</Content>

@@ -1,8 +1,9 @@
 ---
 title: Rebecca
 author: Du Maurier, Daphne
-published: 1938
 tags: [Gothic, Crime]
+location: England
+published: 1938
 read: 2026
 ---
 

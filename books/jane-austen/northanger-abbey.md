@@ -1,7 +1,8 @@
 ---
 title: Northanger Abbey
 author: Austin, Jane
-published: 1817
 tags: Gothic
+location: England
+published: 1817
 read: 2024
 ---

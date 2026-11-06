@@ -1,8 +1,10 @@
 ---
 title: Midnight’s Children
 author: Rushdie, Salman
+tags: Magical Realism
+location: [India, Pakistan, Bangladesh]
 published: 1981
-tags: [Magical Realism, India]
+read: 2023
 ---
 
 Saleem Sinai tells the story of his life, which is somehow linked to the history of India and Pakistan. It is full of politics and allusions to Hindu mythology. No doubt many references went over my head, others led me to find out more.

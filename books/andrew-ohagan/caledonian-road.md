@@ -2,6 +2,7 @@
 title: Caledonian Road
 author: O’Hagan, Andrew
 published: 2024
-tags: [London, Political]
+tags: Political
+location: London
 read: 2025
 ---

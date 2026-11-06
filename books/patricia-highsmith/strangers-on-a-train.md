@@ -1,8 +1,9 @@
 ---
 title: Strangers on a Train
 author: Highsmith, Patricia
+tags: Crime
+location: America
 published: 1950
-tags: [Crime]
 read: 2024
 ---
 

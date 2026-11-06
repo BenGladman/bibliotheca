@@ -2,8 +2,9 @@
 title: Ripley Under Ground
 author: Highsmith, Patricia
 series: Ripliad
+tags: Crime
+location: [London, France]
 published: 1970
-tags: [Crime]
 read: 2026
 ---
 

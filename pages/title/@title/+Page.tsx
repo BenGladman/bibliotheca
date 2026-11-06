@@ -36,6 +36,17 @@ export default function Page() {
         </p>
       )}
 
+      {book.locations.length > 0 && (
+        <p className="flex gap-2 flex-wrap">
+          <span>Location:</span>
+          {book.locations.map((location) => (
+            <Link key={location.location} href={location.url}>
+              {location.location}
+            </Link>
+          ))}
+        </p>
+      )}
+
       {book.read.length > 0 && (
         <p className="flex gap-2 flex-wrap">
           <span>Read:</span>

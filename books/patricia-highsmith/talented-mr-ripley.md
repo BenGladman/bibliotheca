@@ -2,8 +2,9 @@
 title: The Talented Mr Ripley
 author: Highsmith, Patricia
 series: Ripliad
+tags: Crime
+location: Italy
 published: 1955
-tags: [Crime]
 read: 2026
 ---
 

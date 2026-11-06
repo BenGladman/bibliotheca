@@ -1,7 +1,8 @@
 ---
 title: On Earth We’re Briefly Gorgeous
 author: Vuong, Ocean
+tags: Semi Autobiographical
+location: America
 published: 2019
-tags: [Semi Autobiographical]
 read: 2020
 ---

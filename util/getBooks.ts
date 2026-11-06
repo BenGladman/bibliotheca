@@ -15,6 +15,7 @@ export interface Book {
   decadeDescription: string;
   decadeUrl: string;
   tags: Array<{ tag: string; url: string }>;
+  locations: Array<{ location: string; url: string }>;
   read: Array<{ year: number; description: string; url: string }>;
   html: string;
 }
@@ -47,6 +48,10 @@ async function getBooksFn(): Promise<Book[]> {
       tags: toArray(attributes.tags).map((tag) => ({
         tag,
         url: `/tag/${kebabCase(tag)}`,
+      })),
+      locations: toArray(attributes.location).map((location) => ({
+        location,
+        url: `/location/${kebabCase(location)}`,
       })),
       read: toArray(attributes.read).map((year) => ({
         year,

@@ -2,7 +2,8 @@
 title: One Hundred Years of Solitude
 author: García Márquez, Gabriel
 published: 1967
-tags: [Magical Realism, Colombia]
+tags: Magical Realism
+location: Colombia
 ---
 
 A family saga over several generations, and a story of a town. Some events in the book are based on the true history of Colombia.

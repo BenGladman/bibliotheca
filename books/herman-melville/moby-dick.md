@@ -1,6 +1,7 @@
 ---
 title: Moby-Dick
 author: Melville, Herman
+location: America
 published: 1851
 read: 2025
 ---

@@ -2,7 +2,8 @@
 title: Chronicle of a Death Foretold
 author: García Márquez, Gabriel
 published: 1981
-tags: [Crime, Colombia]
+tags: Crime
+location: Colombia
 read: 2026
 ---
 

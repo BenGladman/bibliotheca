@@ -1,6 +1,7 @@
 ---
 title: Gaining Ground
 author: Barfoot, Joan
+location: Canada
 published: 1980
 read: 2026
 ---

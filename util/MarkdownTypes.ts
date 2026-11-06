@@ -2,8 +2,9 @@ export interface MarkdownAttributes {
   title: string;
   author: string;
   series?: string;
-  published: number;
   tags?: string | string[];
+  location?: string | string[];
+  published: number;
   read?: number | number[];
 }
 
