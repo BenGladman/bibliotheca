@@ -5,5 +5,10 @@ import type { Data } from "./+data.js";
 export default function Page() {
   const { books } = useData<Data>();
 
-  return <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />;
+  return (
+    <>
+      <h1>Books</h1>
+      <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />
+    </>
+  );
 }

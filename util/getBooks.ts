@@ -10,6 +10,7 @@ export interface Book {
   authorSort: string;
   authorFullname: string;
   authorUrl: string;
+  authorFirstLetter: string;
   series?: string;
   seriesUrl?: string;
   published: number;
@@ -42,6 +43,7 @@ async function getBooksFn(): Promise<Book[]> {
       authorSort: attributes.author,
       authorFullname,
       authorUrl: `/author/${urlCase(authorFullname)}`,
+      authorFirstLetter: urlCase(attributes.author)[0].toUpperCase(),
       series: attributes.series,
       seriesUrl: attributes.series && `/series/${urlCase(attributes.series)}`,
       published: attributes.published,

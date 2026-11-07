@@ -19,8 +19,15 @@ export function BookList({ books, isAuthorPage, isYearPage, getSectionName }: Bo
       {sections.entries().map(([sectionName, sectionBooks]) => (
         <tbody key={sectionName} className="relative">
           {sectionName && (
-            <tr key={sectionName} className="sticky top-0">
-              <th colSpan={3}>{sectionName}</th>
+            <tr key={sectionName}>
+              <th colSpan={3} aria-label={sectionName} id={sectionName}>
+                <div className="min-h-10" />
+                <div className="absolute inset-0">
+                  <a className="sticky-head ml-4 mt-5" href={`#${sectionName}`}>
+                    {sectionName}
+                  </a>
+                </div>
+              </th>
             </tr>
           )}
 

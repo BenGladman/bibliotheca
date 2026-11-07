@@ -15,6 +15,7 @@ export async function data() {
         sort: b.authorSort,
         fullname: b.authorFullname,
         url: b.authorUrl,
+        firstLetter: b.authorFirstLetter,
       },
     ]),
   );

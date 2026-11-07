@@ -4,6 +4,7 @@
   --color-*: initial;
 
   --color-amber-80: oklch(80% 50% 70);
+  --color-amber-20: oklch(80% 50% 20);
 
   --color-blue-80: oklch(80% 50% 260);
 
@@ -37,12 +38,15 @@
     @apply bg-gray-90/5;
   }
   th {
-    @apply px-2 py-1 text-amber-80 bg-gray-20 font-bold;
+    @apply px-2 pb-2 pt-4;
     vertical-align: top;
     text-align: left;
   }
   td {
     @apply px-2 py-1;
     vertical-align: top;
+  }
+  .sticky-head {
+    @apply sticky top-2 bg-amber-20 text-gray-20 rounded-full px-1 inline-flex min-w-8 justify-center text-lg font-bold border-gray-20 border-2;
   }
 }

@@ -22,8 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 function Sidebar({ children }: { children: React.ReactNode }) {
   return (
-    <div className="p-5 shrink-0 border-r border-r-gray-90/10">
-      <div className="sticky top-0 flex flex-col ">{children}</div>
+    <div className="shrink-0 border-r border-r-gray-90/10">
+      <div className="p-5 sticky top-0 flex flex-col min-h-screen">{children}</div>
     </div>
   );
 }
@@ -31,14 +31,14 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 function Content({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <div className="p-5 pb-12 min-h-screen">{children}</div>
+      <div className="p-5 pb-12">{children}</div>
     </div>
   );
 }
 
 function Logo() {
   return (
-    <div className={"p-5 mb-2"}>
+    <div className="mb-10">
       <Link href="/">
         <img src={logoUrl} height={64} width={64} alt="logo" />
       </Link>
