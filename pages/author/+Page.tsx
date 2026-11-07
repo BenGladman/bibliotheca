@@ -1,34 +1,22 @@
-import { useData } from "vike-react/useData";
-import type { Data } from "./+data.js";
-import { Link } from "#components";
 import { useMemo } from "react";
+import { useData } from "vike-react/useData";
+import { Link, TableWithSections } from "#components";
+
+import type { Data } from "./+data.js";
 
 export default function Page() {
   const { authors } = useData<Data>();
 
-  const sections = useMemo(() => {
-    return Map.groupBy(authors, (author) => author.firstLetter);
-  }, [authors]);
-
   return (
-    <>
-      <h1>Authors</h1>
-      <div className="flex flex-col gap-6 mt-10">
-        {sections.entries().map(([sectionName, sectionAuthors]) => (
-          <div key={sectionName} id={sectionName}>
-            <a className="sticky-head ml-2 mb-2" href={`#${sectionName}`}>
-              {sectionName}
-            </a>
-            <ul>
-              {sectionAuthors.map((a) => (
-                <li key={a.url}>
-                  <Link href={a.url}>{a.fullname}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </>
+    <TableWithSections items={authors} getSectionName={(item) => item.authorFirstLetter}>
+      {(item) => (
+        <tr key={item.authorFirstLetter}>
+          <td>
+            <Link href={item.authorUrl}>{item.authorFullname}</Link>
+          </td>
+          <td className="text-right tabular-nums">{item.count > 1 ? item.count : null}</td>
+        </tr>
+      )}
+    </TableWithSections>
   );
 }

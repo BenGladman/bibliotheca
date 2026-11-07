@@ -4,7 +4,7 @@ import logoUrl from "../assets/logo.svg";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex max-w-5xl m-auto">
+    <div className="m-auto flex max-w-5xl">
       <Sidebar>
         <Logo />
         <Link href="/author">Authors</Link>
@@ -22,8 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 function Sidebar({ children }: { children: React.ReactNode }) {
   return (
-    <div className="shrink-0 border-r border-r-gray-90/10">
-      <div className="p-5 sticky top-0 flex flex-col min-h-screen">{children}</div>
+    <div className="shrink-0">
+      <div className="sticky top-0 flex flex-col p-6">{children}</div>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 function Content({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <div className="p-5 pb-12">{children}</div>
+      <div className="p-6">{children}</div>
     </div>
   );
 }

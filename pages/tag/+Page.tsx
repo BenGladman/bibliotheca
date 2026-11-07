@@ -1,19 +1,21 @@
 import { useData } from "vike-react/useData";
+import { Link, TableWithSections } from "#components";
+
 import type { Data } from "./+data.js";
-import { Link } from "#components";
 
 export default function Page() {
   const { tags } = useData<Data>();
 
   return (
-    <>
-      <ul>
-        {tags.map((tag) => (
-          <li key={tag.tag}>
-            <Link href={tag.url}>{tag.tag}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <TableWithSections items={tags}>
+      {(item) => (
+        <tr key={item.tag}>
+          <td>
+            <Link href={item.url}>{item.tag}</Link>
+          </td>
+          <td className="text-right tabular-nums">{item.count}</td>
+        </tr>
+      )}
+    </TableWithSections>
   );
 }

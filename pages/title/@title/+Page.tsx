@@ -1,6 +1,7 @@
 import { useData } from "vike-react/useData";
-import type { Data } from "./+data.js";
 import { Link } from "#components";
+
+import type { Data } from "./+data.js";
 
 export default function Page() {
   const book = useData<Data>();
@@ -26,7 +27,7 @@ export default function Page() {
       )}
 
       {book.tags.length > 0 && (
-        <p className="flex gap-2 flex-wrap">
+        <p className="flex flex-wrap gap-2">
           <span>Tags:</span>
           {book.tags.map((tag) => (
             <Link key={tag.tag} href={tag.url}>
@@ -37,7 +38,7 @@ export default function Page() {
       )}
 
       {book.locations.length > 0 && (
-        <p className="flex gap-2 flex-wrap">
+        <p className="flex flex-wrap gap-2">
           <span>Location:</span>
           {book.locations.map((location) => (
             <Link key={location.location} href={location.url}>
@@ -48,7 +49,7 @@ export default function Page() {
       )}
 
       {book.read.length > 0 && (
-        <p className="flex gap-2 flex-wrap">
+        <p className="flex flex-wrap gap-2">
           <span>Read:</span>
           {book.read.map((read) => (
             <Link key={read.year} href={read.url}>

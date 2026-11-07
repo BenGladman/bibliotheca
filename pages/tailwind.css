@@ -19,6 +19,9 @@
   h1 {
     @apply mb-4 text-4xl font-bold text-amber-80;
   }
+  h2 {
+    @apply mb-4 text-lg font-bold;
+  }
   ul {
     @apply list-none;
   }
@@ -26,27 +29,24 @@
     @apply list-decimal pl-6;
   }
   p {
-    @apply mb-2 mt-2;
+    @apply mt-2 mb-2;
   }
   a {
     @apply text-blue-80 hover:underline;
   }
   table {
-    @apply -mx-2;
+    @apply -mx-3;
   }
   tr:nth-child(even) {
     @apply bg-gray-90/5;
   }
   th {
-    @apply px-2 pb-2 pt-4;
+    @apply px-3 pt-4 pb-2;
     vertical-align: top;
     text-align: left;
   }
   td {
-    @apply px-2 py-1;
+    @apply px-3 py-1;
     vertical-align: top;
-  }
-  .sticky-head {
-    @apply sticky top-2 bg-amber-20 text-gray-20 rounded-full px-1 inline-flex min-w-8 justify-center text-lg font-bold border-gray-20 border-2;
   }
 }

@@ -1,34 +1,36 @@
-import { kebabCase } from "es-toolkit/string";
-import type { MarkdownModule } from "./MarkdownTypes";
 import { memoize } from "es-toolkit";
+import { kebabCase } from "es-toolkit/string";
+
+import type { MarkdownModule } from "./MarkdownTypes";
 
 export interface Book {
-  title: string;
-  titleSort: string;
-  titleUrl: string;
-  titleFirstLetter: string;
-  authorSort: string;
-  authorFullname: string;
-  authorUrl: string;
-  authorFirstLetter: string;
-  series?: string;
-  seriesUrl?: string;
-  published: number;
-  decadeDescription: string;
-  decadeUrl: string;
-  tags: Array<{ tag: string; url: string }>;
-  locations: Array<{ location: string; url: string }>;
-  read: Array<{ year: number; description: string; url: string }>;
-  html: string;
+  readonly title: string;
+  readonly titleSort: string;
+  readonly titleUrl: string;
+  readonly titleFirstLetter: string;
+  readonly authorSort: string;
+  readonly authorFullname: string;
+  readonly authorUrl: string;
+  readonly authorFirstLetter: string;
+  readonly series?: string;
+  readonly seriesSort?: string;
+  readonly seriesUrl?: string;
+  readonly published: number;
+  readonly decadeDescription: string;
+  readonly decadeUrl: string;
+  readonly tags: Array<{ tag: string; url: string }>;
+  readonly locations: Array<{ location: string; url: string }>;
+  readonly read: Array<{ year: number; description: string; url: string }>;
+  readonly html: string;
 }
 
-async function getBooksFn(): Promise<Book[]> {
+async function getBooksFn(): Promise<readonly Book[]> {
   const importMap = import.meta.glob<MarkdownModule>("#books/*/*.md");
 
   const bookPromises = Object.values(importMap).map(async (importBook): Promise<Book> => {
     const { attributes, html } = await importBook();
 
-    const titleSort = attributes.title.replace(/^(the|a|an)?\W+/gi, "");
+    const titleSort = sortName(attributes.title);
 
     const authorFullname = attributes.author.split(", ").reverse().join(" ");
 
@@ -45,6 +47,7 @@ async function getBooksFn(): Promise<Book[]> {
       authorUrl: `/author/${urlCase(authorFullname)}`,
       authorFirstLetter: urlCase(attributes.author)[0].toUpperCase(),
       series: attributes.series,
+      seriesSort: attributes.series && sortName(attributes.series),
       seriesUrl: attributes.series && `/series/${urlCase(attributes.series)}`,
       published: attributes.published,
       decadeDescription: decadeDescription,
@@ -92,4 +95,8 @@ function urlCase(value: string) {
     .toLowerCase()
     .replace(/[^a-z1-9\- ]/gu, "");
   return kebabCase(lcValueWithDiacriticsRemoved);
+}
+
+function sortName(value: string) {
+  return value.replace(/^(the|a|an)?\W+/gi, "");
 }

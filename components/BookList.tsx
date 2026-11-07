@@ -1,6 +1,8 @@
-import type { Book } from "#util";
 import { useMemo } from "react";
 import { Link } from "./Link";
+import { TableWithSections } from "./TableWithSections";
+
+import type { Book } from "#util";
 
 interface BookListProps {
   books: Book[];
@@ -10,48 +12,27 @@ interface BookListProps {
 }
 
 export function BookList({ books, isAuthorPage, isYearPage, getSectionName }: BookListProps) {
-  const sections = useMemo(() => {
-    return Map.groupBy(books, (book) => getSectionName?.(book));
-  }, [books, getSectionName]);
-
   return (
-    <table>
-      {sections.entries().map(([sectionName, sectionBooks]) => (
-        <tbody key={sectionName} className="relative">
-          {sectionName && (
-            <tr key={sectionName}>
-              <th colSpan={3} aria-label={sectionName} id={sectionName}>
-                <div className="min-h-10" />
-                <div className="absolute inset-0">
-                  <a className="sticky-head ml-4 mt-5" href={`#${sectionName}`}>
-                    {sectionName}
-                  </a>
-                </div>
-              </th>
-            </tr>
+    <TableWithSections items={books} getSectionName={getSectionName}>
+      {(book) => (
+        <tr key={book.title}>
+          <td>
+            <Link href={book.titleUrl}>{book.title}</Link>
+          </td>
+
+          {isAuthorPage ? null : (
+            <td>
+              <Link href={book.authorUrl}>{book.authorFullname}</Link>
+            </td>
           )}
 
-          {sectionBooks.map((b) => (
-            <tr key={b.title}>
-              <td>
-                <Link href={b.titleUrl}>{b.title}</Link>
-              </td>
-
-              {isAuthorPage ? null : (
-                <td>
-                  <Link href={b.authorUrl}>{b.authorFullname}</Link>
-                </td>
-              )}
-
-              {isYearPage ? null : (
-                <td>
-                  <Link href={b.decadeUrl}>{b.published}</Link>
-                </td>
-              )}
-            </tr>
-          ))}
-        </tbody>
-      ))}
-    </table>
+          {isYearPage ? null : (
+            <td className="tabular-nums">
+              <Link href={book.decadeUrl}>{book.published}</Link>
+            </td>
+          )}
+        </tr>
+      )}
+    </TableWithSections>
   );
 }

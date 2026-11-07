@@ -1,5 +1,6 @@
 import { useData } from "vike-react/useData";
-import { BookList } from "../../../components/BookList.js";
+import { BookList } from "#components";
+
 import type { Data } from "./+data.js";
 
 export default function Page() {

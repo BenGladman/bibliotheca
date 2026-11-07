@@ -1,19 +1,21 @@
 import { useData } from "vike-react/useData";
+import { Link, TableWithSections } from "#components";
+
 import type { Data } from "./+data.js";
-import { Link } from "#components";
 
 export default function Page() {
   const { reads } = useData<Data>();
 
   return (
-    <>
-      <ul className="tabular-nums">
-        {reads.map((read) => (
-          <li key={read.description}>
-            <Link href={read.url}>{read.description}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <TableWithSections items={reads}>
+      {(item) => (
+        <tr key={item.year}>
+          <td className="tabular-nums">
+            <Link href={item.url}>{item.description}</Link>
+          </td>
+          <td className="text-right tabular-nums">{item.count}</td>
+        </tr>
+      )}
+    </TableWithSections>
   );
 }

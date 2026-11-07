@@ -1,5 +1,5 @@
-import { getBooks } from "#util";
 import { useConfig } from "vike-react/useConfig";
+import { getBooks } from "#util";
 
 export type Data = Awaited<ReturnType<typeof data>>;
 

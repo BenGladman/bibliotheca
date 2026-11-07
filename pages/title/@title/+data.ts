@@ -1,6 +1,7 @@
-import { getBooks } from "#util";
 import { useConfig } from "vike-react/useConfig";
 import { render } from "vike/abort";
+import { getBooks } from "#util";
+
 import type { PageContextServer } from "vike/types";
 
 export type Data = Awaited<ReturnType<typeof data>>;

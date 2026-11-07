@@ -1,5 +1,5 @@
-import { getBooks } from "#util";
 import { isNotNil } from "es-toolkit";
+import { getBooks } from "#util";
 
 export async function onBeforePrerenderStart() {
   const books = await getBooks();
