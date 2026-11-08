@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 interface TableWithSectionsProps<T> {
   items: T[];
   getSectionName?: (item: T) => string;
@@ -9,11 +11,15 @@ export function TableWithSections<T>({
   getSectionName,
   children,
 }: TableWithSectionsProps<T>) {
-  const sections = getSectionName
-    ? Map.groupBy(items, (item) => getSectionName(item))
-        .entries()
-        .toArray()
-    : [["", items] as [string, T[]]];
+  const sections = useMemo<Array<[string, T[]]>>(() => {
+    if (!getSectionName) {
+      return [["", items]];
+    }
+
+    return Map.groupBy(items, (item) => getSectionName(item))
+      .entries()
+      .toArray();
+  }, [items, getSectionName]);
 
   return (
     <table>

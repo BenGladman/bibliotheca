@@ -4,6 +4,7 @@ author: García Márquez, Gabriel
 published: 1967
 tags: Magical Realism
 location: Colombia
+read: 2024
 ---
 
 A family saga over several generations, and a story of a town. Some events in the book are based on the true history of Colombia.
