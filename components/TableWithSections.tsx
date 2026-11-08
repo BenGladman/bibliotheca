@@ -9,24 +9,25 @@ export function TableWithSections<T>({
   getSectionName,
   children,
 }: TableWithSectionsProps<T>) {
-  const sections = Map.groupBy(items, (item) => getSectionName?.(item));
+  const sections = getSectionName
+    ? Map.groupBy(items, (item) => getSectionName(item))
+        .entries()
+        .toArray()
+    : [["", items] as [string, T[]]];
 
   return (
     <table>
-      {sections.entries().map(([sectionName, sectionItems]) => (
-        <tbody key={sectionName} className="relative">
+      {sections.map(([sectionName, sectionItems]) => (
+        <tbody key={sectionName}>
           {sectionName && (
             <tr key={sectionName}>
-              <th colSpan={3} aria-label={sectionName} id={sectionName}>
-                <div className="min-h-10" />
-                <div className="pointer-events-none absolute inset-0">
-                  <a
-                    className="pointer-events-auto sticky top-5 mt-5 mb-4 ml-2 inline-flex min-w-8 justify-center rounded-full border-2 border-gray-20 bg-amber-20 px-1 text-lg font-bold text-gray-20 no-underline"
-                    href={`#${sectionName}`}
-                  >
-                    {sectionName}
-                  </a>
-                </div>
+              <th colSpan={3} aria-label={sectionName} id={sectionName} className="pt-8 pb-0">
+                <a
+                  className="inline-flex min-w-12 justify-center rounded-t-3xl bg-gray-90/5 px-4 pt-1 text-lg font-bold text-amber-20 no-underline"
+                  href={`#${sectionName}`}
+                >
+                  {sectionName}
+                </a>
               </th>
             </tr>
           )}
