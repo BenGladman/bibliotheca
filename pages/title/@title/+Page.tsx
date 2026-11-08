@@ -4,7 +4,7 @@ import { Link } from "#components";
 import type { Data } from "./+data.js";
 
 export default function Page() {
-  const book = useData<Data>();
+  const { book, wikiExtract } = useData<Data>();
 
   return (
     <>
@@ -57,6 +57,20 @@ export default function Page() {
             </Link>
           ))}
         </p>
+      )}
+
+      {wikiExtract && (
+        <blockquote
+          className="mt-6 border-l-2 border-gray-90/50 pl-2"
+          dangerouslySetInnerHTML={{ __html: wikiExtract }}
+          cite={`https://en.wikipedia.org/?curid=${book.wikiPageId}`}
+        />
+      )}
+
+      {book.wikiPageId && (
+        <cite className="block text-right">
+          <a href={`https://en.wikipedia.org/?curid=${book.wikiPageId}`}>Wikipedia</a>
+        </cite>
       )}
     </>
   );

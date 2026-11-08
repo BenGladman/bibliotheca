@@ -1,4 +1,4 @@
-import { isNotNil } from "es-toolkit";
+import { isNotNil } from "es-toolkit/predicate";
 import { getBooks } from "#util";
 
 export async function onBeforePrerenderStart() {

@@ -1,4 +1,4 @@
-import { memoize } from "es-toolkit";
+import { memoize } from "es-toolkit/function";
 import { kebabCase } from "es-toolkit/string";
 
 import type { MarkdownModule } from "./MarkdownTypes";
@@ -22,6 +22,7 @@ export interface Book {
   readonly locations: Array<{ location: string; url: string }>;
   readonly read: Array<{ year: number; description: string; url: string }>;
   readonly html: string;
+  readonly wikiPageId?: number;
 }
 
 async function getBooksFn(): Promise<readonly Book[]> {
@@ -66,6 +67,7 @@ async function getBooksFn(): Promise<readonly Book[]> {
         url: `/read/${year}`,
       })),
       html,
+      wikiPageId: attributes.wikiPageId,
     };
   });
 

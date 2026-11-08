@@ -6,6 +6,7 @@ export interface MarkdownAttributes {
   location?: string | string[];
   published: number;
   read?: number | number[];
+  wikiPageId?: number;
 }
 
 export interface MarkdownModule {

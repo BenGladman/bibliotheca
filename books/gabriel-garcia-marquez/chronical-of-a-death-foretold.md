@@ -5,6 +5,7 @@ published: 1981
 tags: Crime
 location: Colombia
 read: 2026
+wikiPageId: 664682
 ---
 
 The story of a murder. The killers don’t really want to kill, they tell everyone their intentions hoping they will be stopped, but nobody believes them or they don’t think it’s their responsibility. They get off pretty lightly anyway because the murder was for the honor of their sister. Includes some funny passages about gonorrhea.
