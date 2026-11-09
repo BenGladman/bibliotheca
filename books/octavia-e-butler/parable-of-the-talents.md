@@ -6,4 +6,5 @@ tags: Post-Apocalyptic
 location: America
 published: 1998
 read: 2026
+wikiPageId: 4212330
 ---

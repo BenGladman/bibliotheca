@@ -5,6 +5,7 @@ published: 1936
 tags: Gothic
 location: England
 read: 2026
+wikiPageId: 3291764
 ---
 
 Mary goes to Bodmin Moor to live with her aunt and uncle after her mum dies. There is lots of awful weather. Her uncle Joss is a huge and terrible man but also he is haunted by the terrors he has perpetrated, especially when he is drunk which happens regularly. Her aunt is barely a shadow with no agency.

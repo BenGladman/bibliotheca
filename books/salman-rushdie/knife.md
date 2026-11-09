@@ -2,6 +2,7 @@
 title: "Knife: Meditations After an Attempted Murder"
 author: Rushdie, Salman
 published: 2024
-tags: [Memoir]
+tags: Memoir
 read: 2025
+wikiPageId: 76628896
 ---

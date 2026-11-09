@@ -6,4 +6,5 @@ published: 2012
 tags: Memoir
 location: Norway
 read: 2026
+wikiPageId: 42478967
 ---
