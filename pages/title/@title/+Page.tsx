@@ -1,5 +1,5 @@
 import { useData } from "vike-react/useData";
-import { Link } from "#components";
+import { Link, Quote } from "#components";
 
 import type { Data } from "./+data.js";
 
@@ -59,30 +59,20 @@ export default function Page() {
         </p>
       )}
 
-      {googleBooksReference && (
-        <>
-          <blockquote
-            className="mt-6 border-l-2 border-gray-90/50 pl-2"
-            dangerouslySetInnerHTML={{ __html: googleBooksReference.description }}
-            cite={googleBooksReference.cite}
-          />
-          <cite className="block text-right">
-            <a href={googleBooksReference.cite}>Google Books</a>
-          </cite>
-        </>
+      {wikipediaReference && (
+        <Quote
+          html={wikipediaReference.extract}
+          cite={wikipediaReference.cite}
+          citeTitle="Wikipedia"
+        />
       )}
 
-      {wikipediaReference && (
-        <>
-          <blockquote
-            className="mt-6 border-l-2 border-gray-90/50 pl-2"
-            dangerouslySetInnerHTML={{ __html: wikipediaReference.extract }}
-            cite={wikipediaReference.cite}
-          />
-          <cite className="block text-right">
-            <a href={wikipediaReference.cite}>Wikipedia</a>
-          </cite>
-        </>
+      {googleBooksReference && (
+        <Quote
+          html={googleBooksReference.description}
+          cite={googleBooksReference.cite}
+          citeTitle="Google Books"
+        />
       )}
     </>
   );

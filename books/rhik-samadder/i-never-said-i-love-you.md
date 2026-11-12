@@ -4,4 +4,5 @@ author: Samadder, Rhik
 tags: Memoir
 published: 2019
 read: 2020
+googleBookId: bqKODwAAQBAJ
 ---

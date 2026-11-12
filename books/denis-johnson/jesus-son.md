@@ -6,4 +6,5 @@ location: America
 published: 1992
 read: 2026
 wikiPageId: 29822549
+googleBookId: pOx50QEACAAJ
 ---

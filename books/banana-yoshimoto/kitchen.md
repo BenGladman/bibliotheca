@@ -5,4 +5,5 @@ location: Japan
 published: 1993
 read: 2022
 wikiPageId: 1463682
+googleBookId: rMCB9a2OqpcC
 ---

@@ -4,4 +4,5 @@ author: Calvino, Italo
 published: 1979
 read: 2021
 wikiPageId: 60198
+googleBookId: R9qnfnugEOsC
 ---

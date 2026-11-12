@@ -5,6 +5,7 @@ location: America
 published: 1851
 read: 2025
 wikiPageId: 19859
+googleBookId: k_CiCj_ZEtsC
 ---
 
 There are lots of different elements in here. Ishmael is dissatisfied with his life and wants some adventure, so he sets off to join a whaling crew. He meets up with a Polynesian harpooner Queequeg, whom he is first afraid of but quickly they become very close, with a surprisingly tactile relationship. There are many descriptions of different ethnicities throughout, and it does descend into racism at some points but you feel that Melville is generally a ‘cool guy’.

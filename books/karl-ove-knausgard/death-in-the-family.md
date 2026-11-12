@@ -7,4 +7,5 @@ tags: Memoir
 location: Norway
 read: 2026
 wikiPageId: 42478967
+googleBookId: CT2ia70pgyIC
 ---

@@ -5,4 +5,5 @@ tags: Memoir
 location: [Spain, South Africa, London]
 published: 2013
 read: 2026
+googleBookId: sditAAAAQBAJ
 ---

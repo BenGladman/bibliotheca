@@ -6,4 +6,5 @@ tags: [Gay, Political]
 location: London
 read: 2022
 wikiPageId: 1085154
+googleBookId: cVJuuqhUcs4C
 ---

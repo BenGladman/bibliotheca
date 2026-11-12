@@ -6,6 +6,7 @@ tags: Magical Realism
 location: Colombia
 read: 2024
 wikiPageId: 654705
+googleBookId: ED36QQAACAAJ
 ---
 
 A family saga over several generations, and a story of a town. Some events in the book are based on the true history of Colombia.

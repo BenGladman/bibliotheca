@@ -6,6 +6,7 @@ location: [India, Pakistan, Bangladesh]
 published: 1981
 read: 2023
 wikiPageId: 149689
+googleBookId: 4WL_ZrUbIPgC
 ---
 
 Saleem Sinai tells the story of his life, which is somehow linked to the history of India and Pakistan. It is full of politics and allusions to Hindu mythology. No doubt many references went over my head, others led me to find out more.

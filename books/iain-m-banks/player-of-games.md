@@ -6,4 +6,5 @@ published: 1988
 tags: SciFi
 read: 2024
 wikiPageId: 68857
+googleBookId: 4TtHAQAAQBAJ
 ---
