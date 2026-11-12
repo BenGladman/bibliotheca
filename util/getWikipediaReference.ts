@@ -2,6 +2,7 @@ import { memoize } from "es-toolkit/function";
 
 interface Reference {
   pageId: number;
+  title: string;
   extract: string;
   cite: string;
 }

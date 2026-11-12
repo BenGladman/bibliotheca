@@ -29,11 +29,19 @@ async function fetchExtracts(pageIds: number[], continueParam?: any) {
     const result = await response.json();
     if (result.query) {
       for (const pageId of pageIds) {
-        const extract = result.query.pages[pageId]?.extract;
-        if (extract) {
+        const pageData = result.query.pages[pageId];
+        if (pageData.extract) {
           await fs.writeFile(
             referencePath(pageId),
-            JSON.stringify({ pageId, extract }, undefined, 2),
+            JSON.stringify(
+              {
+                pageId,
+                title: pageData.title,
+                extract: pageData.extract,
+              },
+              undefined,
+              2,
+            ),
             { encoding: "utf-8" }, //
           );
         }
