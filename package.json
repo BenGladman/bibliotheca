@@ -4,6 +4,7 @@
   "imports": {
     "#books/*": "./books/*",
     "#components": "./components/index.ts",
+    "#references/*": "./references/*",
     "#util": "./util/index.ts"
   },
   "scripts": {
@@ -11,7 +12,8 @@
     "build": "vike build",
     "preview": "vike build && vike preview",
     "lint": "oxlint",
-    "format": "oxfmt"
+    "format": "oxfmt",
+    "fetch-wikipedia": "node ./scripts/runViteScript.ts fetchWikipediaReferences.ts"
   },
   "dependencies": {
     "es-toolkit": "^1.52.0",
