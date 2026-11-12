@@ -1,6 +1,6 @@
 import { useConfig } from "vike-react/useConfig";
 import { render } from "vike/abort";
-import { getBooks, getWikiExtract } from "#util";
+import { getBooks, getGoogleBooksReference, getWikipediaReference } from "#util";
 
 import type { PageContextServer } from "vike/types";
 
@@ -23,7 +23,8 @@ export async function data(pageContext: PageContextServer) {
     title: `${book.title} – ${book.authorFullname}`,
   });
 
-  const wikiExtract = await getWikiExtract(book.wikiPageId);
+  const googleBooksReference = await getGoogleBooksReference(book.googleBookId);
+  const wikipediaReference = await getWikipediaReference(book.wikiPageId);
 
-  return { book, wikiExtract };
+  return { book, googleBooksReference, wikipediaReference };
 }

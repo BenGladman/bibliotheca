@@ -23,6 +23,7 @@ export interface Book {
   readonly read: Array<{ year: number; description: string; url: string }>;
   readonly html: string;
   readonly wikiPageId?: number;
+  readonly googleBookId?: string;
 }
 
 async function getBooksFn(): Promise<readonly Book[]> {
@@ -68,6 +69,7 @@ async function getBooksFn(): Promise<readonly Book[]> {
       })),
       html,
       wikiPageId: attributes.wikiPageId,
+      googleBookId: attributes.googleBookId,
     };
   });
 

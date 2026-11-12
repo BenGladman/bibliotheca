@@ -13,7 +13,9 @@
     "preview": "vike build && vike preview",
     "lint": "oxlint",
     "format": "oxfmt",
-    "fetch-wikipedia": "node ./scripts/runViteScript.ts fetchWikipediaReferences.ts"
+    "fetch-google": "node ./scripts/runViteScript.ts fetchGoogleBooksReferences.ts",
+    "fetch-wikipedia": "node ./scripts/runViteScript.ts fetchWikipediaReferences.ts",
+    "fetch-references": "npm run fetch-google && npm run fetch-wikipedia"
   },
   "dependencies": {
     "es-toolkit": "^1.52.0",

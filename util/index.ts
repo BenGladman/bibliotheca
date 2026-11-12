@@ -1,3 +1,4 @@
 export * from "./getBooks";
-export * from "./getWikiExtract";
+export * from "./getGoogleBooksReference";
+export * from "./getWikipediaReference";
 export * from "./MarkdownTypes";

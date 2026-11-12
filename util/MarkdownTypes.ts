@@ -7,6 +7,7 @@ export interface MarkdownAttributes {
   published: number;
   read?: number | number[];
   wikiPageId?: number;
+  googleBookId?: string;
 }
 
 export interface MarkdownModule {

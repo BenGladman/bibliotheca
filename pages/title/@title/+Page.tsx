@@ -4,7 +4,7 @@ import { Link } from "#components";
 import type { Data } from "./+data.js";
 
 export default function Page() {
-  const { book, wikiExtract } = useData<Data>();
+  const { book, googleBooksReference, wikipediaReference } = useData<Data>();
 
   return (
     <>
@@ -59,18 +59,30 @@ export default function Page() {
         </p>
       )}
 
-      {wikiExtract && (
-        <blockquote
-          className="mt-6 border-l-2 border-gray-90/50 pl-2"
-          dangerouslySetInnerHTML={{ __html: wikiExtract }}
-          cite={`https://en.wikipedia.org/?curid=${book.wikiPageId}`}
-        />
+      {googleBooksReference && (
+        <>
+          <blockquote
+            className="mt-6 border-l-2 border-gray-90/50 pl-2"
+            dangerouslySetInnerHTML={{ __html: googleBooksReference.description }}
+            cite={googleBooksReference.cite}
+          />
+          <cite className="block text-right">
+            <a href={googleBooksReference.cite}>Google Books</a>
+          </cite>
+        </>
       )}
 
-      {book.wikiPageId && (
-        <cite className="block text-right">
-          <a href={`https://en.wikipedia.org/?curid=${book.wikiPageId}`}>Wikipedia</a>
-        </cite>
+      {wikipediaReference && (
+        <>
+          <blockquote
+            className="mt-6 border-l-2 border-gray-90/50 pl-2"
+            dangerouslySetInnerHTML={{ __html: wikipediaReference.extract }}
+            cite={wikipediaReference.cite}
+          />
+          <cite className="block text-right">
+            <a href={wikipediaReference.cite}>Wikipedia</a>
+          </cite>
+        </>
       )}
     </>
   );
