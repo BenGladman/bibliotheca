@@ -9,9 +9,9 @@ export default function Page() {
   return (
     <>
       <h1>{books[0].series}</h1>
-      <h2>
+      <h3>
         <Link href={books[0].authorUrl}>{books[0].authorFullname}</Link>
-      </h2>
+      </h3>
       <BookList books={books} isAuthorPage />
     </>
   );

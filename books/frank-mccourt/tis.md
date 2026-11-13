@@ -1,5 +1,6 @@
 ---
-title: "’Tis: A Memoir"
+title: ’Tis
+subTitle: A Memoir
 author: McCourt, Frank
 tags: Memoir
 location: Ireland

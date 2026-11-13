@@ -1,5 +1,6 @@
 ---
-title: "Money: A Suicide Note"
+title: Money
+subTitle: A Suicide Note
 author: Amis, Martin
 location: [London, New York]
 published: 1984

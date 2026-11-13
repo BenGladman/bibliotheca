@@ -9,13 +9,14 @@ export default function Page() {
   return (
     <>
       <h1>{book.title}</h1>
+      {book.subTitle && <h2>{book.subTitle}</h2>}
 
-      <h2>
+      <h3>
         <Link href={book.authorUrl}>{book.authorFullname}</Link>
         <span> (</span>
         <Link href={book.decadeUrl}>{book.published}</Link>
         <span>)</span>
-      </h2>
+      </h3>
 
       <div dangerouslySetInnerHTML={{ __html: book.html }} />
 

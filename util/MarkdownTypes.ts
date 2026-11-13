@@ -1,5 +1,7 @@
 export interface MarkdownAttributes {
   title: string;
+  titleUrlSuffix?: string;
+  subTitle?: string;
   author: string;
   series?: string;
   tags?: string | string[];

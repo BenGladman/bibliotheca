@@ -1,5 +1,6 @@
 ---
-title: "Orlando: A Biography"
+title: Orlando
+subTitle: A Biography
 author: Woolf, Virginia
 location: England
 published: 1928

@@ -1,5 +1,6 @@
 ---
-title: "Angela’s Ashes: A Memoir"
+title: Angela’s Ashes
+subTitle: A Memoir
 author: McCourt, Frank
 tags: Memoir
 location: Ireland

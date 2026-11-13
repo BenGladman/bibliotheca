@@ -1,5 +1,6 @@
 ---
-title: "Things I Don't Want to Know: On Writing"
+title: Things I Don’t Want to Know
+subTitle: On Writing
 author: Levi, Deborah
 tags: Memoir
 location: [Spain, South Africa, London]

@@ -1,5 +1,6 @@
 ---
-title: "George: A Magpie Memoir"
+title: George
+subTitle: A Magpie Memoir
 author: Hughes, Frieda
 tags: Memoir
 location: England

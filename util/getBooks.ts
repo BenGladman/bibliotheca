@@ -8,6 +8,7 @@ export interface Book {
   readonly titleSort: string;
   readonly titleUrl: string;
   readonly titleFirstLetter: string;
+  readonly subTitle?: string;
   readonly authorSort: string;
   readonly authorFullname: string;
   readonly authorUrl: string;
@@ -33,6 +34,7 @@ async function getBooksFn(): Promise<readonly Book[]> {
     const { attributes, html } = await importBook();
 
     const titleSort = sortName(attributes.title);
+    const titleUrlSuffix = attributes.titleUrlSuffix ? `-${attributes.titleUrlSuffix}` : "";
 
     const authorFullname = attributes.author.split(", ").reverse().join(" ");
 
@@ -42,8 +44,9 @@ async function getBooksFn(): Promise<readonly Book[]> {
     return {
       title: attributes.title,
       titleSort,
-      titleUrl: `/title/${urlCase(attributes.title)}`,
+      titleUrl: `/title/${urlCase(attributes.title)}${titleUrlSuffix}`,
       titleFirstLetter: urlCase(titleSort)[0].toUpperCase(),
+      subTitle: attributes.subTitle,
       authorSort: attributes.author,
       authorFullname,
       authorUrl: `/author/${urlCase(authorFullname)}`,
@@ -74,6 +77,9 @@ async function getBooksFn(): Promise<readonly Book[]> {
   });
 
   const books = await Promise.all(bookPromises);
+
+  checkDuplicateTitleUrls(books);
+
   books.sort((a, b) => a.titleSort.localeCompare(b.titleSort));
 
   return books;
@@ -103,4 +109,18 @@ function urlCase(value: string) {
 
 function sortName(value: string) {
   return value.replace(/^(the|a|an)?\W+/gi, "");
+}
+
+function checkDuplicateTitleUrls(books: Book[]) {
+  const seen = new Set<string>();
+
+  for (const book of books) {
+    if (seen.has(book.titleUrl)) {
+      throw new Error(
+        `Error found duplicate title URL: ${book.titleUrl}. Use titleUrlSuffix property to make unique.`,
+      );
+    } else {
+      seen.add(book.titleUrl);
+    }
+  }
 }

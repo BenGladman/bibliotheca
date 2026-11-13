@@ -1,5 +1,6 @@
 ---
-title: "Surprisingly Down to Earth, and Very Funny: My Autobiography"
+title: Surprisingly Down to Earth, and Very Funny
+subTitle: My Autobiography
 author: Limmy
 tags: Memoir
 location: Scotland

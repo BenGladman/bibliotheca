@@ -1,5 +1,6 @@
 ---
-title: "Jason Molina: Riding with the Ghost"
+title: Jason Molina
+subTitle: Riding with the Ghost
 author: Osman, Erin
 tags: Biography
 published: 2017
