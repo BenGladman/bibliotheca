@@ -1,6 +1,7 @@
 ---
 title: The Dark Forest
 author: Lui Cixin
+location: China
 series: Remembrance of Earth’s Past
 published: 2008
 tags: SciFi
