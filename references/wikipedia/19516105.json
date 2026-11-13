@@ -1,5 +1,10 @@
 {
   "pageId": 19516105,
   "title": "Home (Robinson novel)",
-  "extract": "<p class=\"mw-empty-elt\">\n\n</p>\n\n<p><i><b>Home</b></i> is a novel by Pulitzer Prize-winning American author Marilynne Robinson. Published in 2008, it is Robinson's third novel, preceded by <i>Housekeeping</i> (1980) and <i>Gilead</i> (2004).\n</p>"
+  "extract": [
+    "<p class=\"mw-empty-elt\">",
+    "</p>",
+    "<p><i><b>Home</b></i> is a novel by Pulitzer Prize-winning American author Marilynne Robinson. Published in 2008, it is Robinson's third novel, preceded by <i>Housekeeping</i> (1980) and <i>Gilead</i> (2004).",
+    "</p>"
+  ]
 }

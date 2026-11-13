@@ -3,7 +3,7 @@ import { memoize } from "es-toolkit/function";
 interface Reference {
   bookId: string;
   title: string;
-  description: string;
+  description: string[];
   cite: string;
 }
 

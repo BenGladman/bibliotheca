@@ -61,7 +61,7 @@ export default function Page() {
 
       {wikipediaReference && (
         <Quote
-          html={wikipediaReference.extract}
+          html={wikipediaReference.extract.join("\n")}
           cite={wikipediaReference.cite}
           citeTitle="Wikipedia"
         />
@@ -69,7 +69,7 @@ export default function Page() {
 
       {googleBooksReference && (
         <Quote
-          html={googleBooksReference.description}
+          html={googleBooksReference.description.join("\n")}
           cite={googleBooksReference.cite}
           citeTitle="Google Books"
         />

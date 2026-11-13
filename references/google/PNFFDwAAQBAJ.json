@@ -1,5 +1,11 @@
 {
   "bookId": "PNFFDwAAQBAJ",
   "title": "Asymmetry",
-  "description": "<p><b>'A scorchingly intelligent first novel' <i>New York Times</i><br>'Spellbinding' <i>New Yorker</i><br>'Thrilling' <i>Guardian</i><br></b></p><p>In New York, Alice, a young editor, begins an affair with Ezra Blazer, a world-famous, much older writer. At Heathrow airport, Amar, an Iraqi-American economist en route to Kurdistan, is detained by immigration. Somehow their lives are connected, in this unconventional love story that has things to say about all of contemporary life.</p>"
+  "description": [
+    "<p><b>'A scorchingly intelligent first novel' <i>New York Times</i>",
+    "<br>'Spellbinding' <i>New Yorker</i>",
+    "<br>'Thrilling' <i>Guardian</i>",
+    "<br></b></p>",
+    "<p>In New York, Alice, a young editor, begins an affair with Ezra Blazer, a world-famous, much older writer. At Heathrow airport, Amar, an Iraqi-American economist en route to Kurdistan, is detained by immigration. Somehow their lives are connected, in this unconventional love story that has things to say about all of contemporary life.</p>"
+  ]
 }

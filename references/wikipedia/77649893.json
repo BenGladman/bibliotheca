@@ -1,5 +1,10 @@
 {
   "pageId": 77649893,
   "title": "Summer (Smith novel)",
-  "extract": "<p class=\"mw-empty-elt\">\n</p>\n\n<p><i><b>Summer</b></i> is a 2020 novel by Scottish author Ali Smith, first published by Hamish Hamilton.\n</p>"
+  "extract": [
+    "<p class=\"mw-empty-elt\">",
+    "</p>",
+    "<p><i><b>Summer</b></i> is a 2020 novel by Scottish author Ali Smith, first published by Hamish Hamilton.",
+    "</p>"
+  ]
 }

@@ -1,5 +1,7 @@
 {
   "bookId": "mI5lAAAAMAAJ",
   "title": "Saturday",
-  "description": "Saturday, February 15th, 2003, Henry Perowne is a contented man - a successful neurosurgeon, the devoted husband of Rosalind and proud father of two grown-up children. Unusually he wakes before dawn, drawn to the window and filled with a growing unease. As he looks out at the night sky he is troubled by the state of the world - the impending war with Iraq, a gathering pessimism since 9/11, and a fear that his city and his happy family life are under threat."
+  "description": [
+    "Saturday, February 15th, 2003, Henry Perowne is a contented man - a successful neurosurgeon, the devoted husband of Rosalind and proud father of two grown-up children. Unusually he wakes before dawn, drawn to the window and filled with a growing unease. As he looks out at the night sky he is troubled by the state of the world - the impending war with Iraq, a gathering pessimism since 9/11, and a fear that his city and his happy family life are under threat."
+  ]
 }

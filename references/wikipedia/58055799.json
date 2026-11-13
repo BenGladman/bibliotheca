@@ -1,5 +1,11 @@
 {
   "pageId": 58055799,
   "title": "Golden Hill (novel)",
-  "extract": "<p class=\"mw-empty-elt\">\n</p>\n\n<p><i><b>Golden Hill</b></i> is a 2016 novel by the English writer Francis Spufford. It won the Costa Book Award for a first novel, and the Ondaatje Prize. As explained in its acknowledgements, it is heavily influenced by <i>The Adventures of David Simple</i> by Sarah Fielding and <i>Joseph Andrews</i> by her brother Henry Fielding.\n</p><p>The novel follows a mysterious British traveller named Mr Smith who arrives in New York City in 1746 and upends the lives of the merchant and political classes.\n</p>"
+  "extract": [
+    "<p class=\"mw-empty-elt\">",
+    "</p>",
+    "<p><i><b>Golden Hill</b></i> is a 2016 novel by the English writer Francis Spufford. It won the Costa Book Award for a first novel, and the Ondaatje Prize. As explained in its acknowledgements, it is heavily influenced by <i>The Adventures of David Simple</i> by Sarah Fielding and <i>Joseph Andrews</i> by her brother Henry Fielding.",
+    "</p><p>The novel follows a mysterious British traveller named Mr Smith who arrives in New York City in 1746 and upends the lives of the merchant and political classes.",
+    "</p>"
+  ]
 }

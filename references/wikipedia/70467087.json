@@ -1,5 +1,10 @@
 {
   "pageId": 70467087,
   "title": "The Employees",
-  "extract": "<p class=\"mw-empty-elt\">\n</p>\n\n<p><i><b>The Employees</b></i> is a novel by Danish writer Olga Ravn published May 24 2018. An English translation by Martin Aitken was published October 1 2020. The novel details the interactions between human and android crew members aboard a futuristic spacecraft as they encounter and react to a series of mysterious alien objects.\n</p>"
+  "extract": [
+    "<p class=\"mw-empty-elt\">",
+    "</p>",
+    "<p><i><b>The Employees</b></i> is a novel by Danish writer Olga Ravn published May 24 2018. An English translation by Martin Aitken was published October 1 2020. The novel details the interactions between human and android crew members aboard a futuristic spacecraft as they encounter and react to a series of mysterious alien objects.",
+    "</p>"
+  ]
 }

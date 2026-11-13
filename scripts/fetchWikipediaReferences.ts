@@ -37,12 +37,12 @@ async function fetchExtracts(pageIds: number[], continueParam?: any) {
               {
                 pageId,
                 title: pageData.title,
-                extract: pageData.extract,
+                extract: pageData.extract.split("\n").filter(Boolean),
               },
               undefined,
               2,
             ),
-            { encoding: "utf-8" }, //
+            { encoding: "utf-8" },
           );
         }
       }

@@ -9,6 +9,10 @@ function referencePath(bookId: string) {
   return path.join(referenceDir, `${bookId}.json`);
 }
 
+function splitDescription(description: string): string[] {
+  return description.split(/\n|(?=<br>)|(?<=<\/p>)/).filter((v) => v !== "");
+}
+
 async function fetchAllExtracts() {
   await fs.mkdir(referenceDir, { recursive: true });
 
@@ -46,12 +50,12 @@ async function fetchAllExtracts() {
           {
             bookId,
             title: result.volumeInfo.title,
-            description: result.volumeInfo.description,
+            description: splitDescription(result.volumeInfo.description),
           },
           undefined,
           2,
         ),
-        { encoding: "utf-8" }, //
+        { encoding: "utf-8" },
       );
     } else {
       console.log(
