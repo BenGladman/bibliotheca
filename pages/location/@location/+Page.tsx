@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <h1>{location}</h1>
-      <BookList books={books} />
+      <BookList books={books} isAuthorPage getSectionName={(b) => b.authorFullname} />
     </>
   );
 }

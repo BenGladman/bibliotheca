@@ -18,6 +18,10 @@ export async function data(pageContext: PageContextServer) {
     throw render(404);
   }
 
+  filteredBooks
+    .sort((a, b) => a.published - b.published)
+    .sort((a, b) => a.authorSort.localeCompare(b.authorSort));
+
   const location = filteredBooks[0].locations.find(
     (t) => t.url === pageContext.urlPathname,
   )?.location;
