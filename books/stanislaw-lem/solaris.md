@@ -1,6 +1,6 @@
 ---
 title: Solaris
-author: Lem, Stanislaw
+author: Lem, Stanisław
 tags: SciFi
 published: 1961
 read: 2025
