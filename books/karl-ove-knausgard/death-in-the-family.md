@@ -1,5 +1,6 @@
 ---
 title: A Death in the Family
+subTitle: "My Struggle: Book 1"
 author: Knausgård, Karl Ove
 series: My Struggle
 published: 2012
