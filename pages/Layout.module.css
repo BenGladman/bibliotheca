@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  margin: auto;
+  max-width: 64rem;
+}
+
+.sidebar {
+  flex: none;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+  }
+
+  & a {
+    color: var(--text-color-2);
+    text-decoration: none;
+    padding: 0.25rem 0;
+  }
+}
+
+.logo {
+  margin-bottom: 2.5rem;
+}
+
+.content {
+  & > div {
+    padding: 1.5rem;
+  }
+}

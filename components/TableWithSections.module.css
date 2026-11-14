@@ -1,0 +1,38 @@
+.table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  padding: 0 0.75rem;
+
+  tr:nth-child(even) {
+    background-color: var(--background-color-2);
+  }
+
+  th {
+    padding: 1.5rem 0.75rem 0;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  tbody:first-child th {
+    padding-top: 0;
+  }
+
+  td {
+    padding: 0.25rem 0.75rem;
+    vertical-align: top;
+  }
+}
+
+.sectionHead {
+  background-color: var(--background-color-2);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  color: var(--heading-color-2);
+  display: inline-flex;
+  font-size: 1.125rem;
+  font-weight: bold;
+  justify-content: center;
+  min-width: 3rem;
+  padding: 0.25rem 1rem 0;
+  text-decoration: none;
+}

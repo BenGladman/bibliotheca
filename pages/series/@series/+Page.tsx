@@ -8,10 +8,12 @@ export default function Page() {
 
   return (
     <>
-      <h1>{books[0].series}</h1>
-      <h3>
-        <Link href={books[0].authorUrl}>{books[0].authorFullname}</Link>
-      </h3>
+      <header>
+        <h1>{books[0].series}</h1>
+        <h3>
+          <Link href={books[0].authorUrl}>{books[0].authorFullname}</Link>
+        </h3>
+      </header>
       <BookList books={books} isAuthorPage />
     </>
   );

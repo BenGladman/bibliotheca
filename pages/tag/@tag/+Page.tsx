@@ -8,7 +8,9 @@ export default function Page() {
 
   return (
     <>
-      <h1>{tag}</h1>
+      <header>
+        <h1>{tag}</h1>
+      </header>
       <BookList books={books} isAuthorPage getSectionName={(b) => b.authorFullname} />
     </>
   );

@@ -8,9 +8,5 @@
       "type-import",
       "unknown"
     ]
-  },
-  "sortTailwindcss": {
-    "stylesheet": "./pages/tailwind.css",
-    "preserveWhitespace": false
   }
 }

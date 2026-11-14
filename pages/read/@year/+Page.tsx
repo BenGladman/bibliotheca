@@ -8,7 +8,9 @@ export default function Page() {
 
   return (
     <>
-      <h1>{readDescription}</h1>
+      <header>
+        <h1>{readDescription}</h1>
+      </header>
       <BookList books={books} />
     </>
   );

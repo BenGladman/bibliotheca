@@ -1,4 +1,5 @@
 import { usePageContext } from "vike-react/usePageContext";
+import styles from "./Link.module.css";
 
 interface LinkProps {
   href: string;
@@ -11,10 +12,10 @@ export function Link({ href, children }: LinkProps) {
 
   const resolvedHref = href.startsWith("/") ? `${import.meta.env.BASE_URL}${href.slice(1)}` : href;
 
-  const isActive = urlPathname.startsWith(href);
+  const current = urlPathname.startsWith(href) ? "page" : undefined;
 
   return (
-    <a href={resolvedHref} className={isActive ? "font-bold" : undefined}>
+    <a href={resolvedHref} aria-current={current} className={styles.link}>
       {children}
     </a>
   );

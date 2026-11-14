@@ -1,0 +1,16 @@
+.figure {
+  background-color: var(--background-color-2);
+  border-left: 0.125rem solid var(--rule-color);
+  margin: 1rem 0;
+  margin-trim: block;
+  padding: 0.25rem 0.5rem;
+
+  & > blockquote {
+    margin-trim: block;
+  }
+
+  & > figcaption {
+    font-size: 0.875rem;
+    text-align: right;
+  }
+}

@@ -1,0 +1,17 @@
+.dl {
+  margin: 0.5rem 0;
+
+  dd,
+  dt {
+    display: inline;
+    margin-right: 0.25rem;
+  }
+
+  dt::after {
+    content: ":";
+  }
+
+  dd:has(+ dd)::after {
+    content: ",";
+  }
+}
