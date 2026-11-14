@@ -1,5 +1,6 @@
 ---
-title: "Moby-Dick; or, The Whale"
+title: Moby-Dick
+subTitle: "or, The Whale"
 author: Melville, Herman
 location: America
 published: 1851

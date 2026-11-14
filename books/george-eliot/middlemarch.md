@@ -1,5 +1,6 @@
 ---
-title: Middlemarch, A Study of Provincial Life
+title: Middlemarch
+subTitle: A Study of Provincial Life
 author: Eliot, George
 location: England
 published: 1872
