@@ -1,10 +1,17 @@
 import { useData } from "vike-react/useData";
-import { BookList } from "#components";
+import { BookList, Header } from "#components";
 
 import type { Data } from "./+data.js";
 
 export default function Page() {
-  const { books } = useData<Data>();
+  const { title, books } = useData<Data>();
 
-  return <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />;
+  return (
+    <>
+      <Header>
+        <h1>{title}</h1>
+      </Header>
+      <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />;
+    </>
+  );
 }

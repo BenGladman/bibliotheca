@@ -1,5 +1,5 @@
 import { useData } from "vike-react/useData";
-import { BookList } from "#components";
+import { BookList, Header } from "#components";
 
 import type { Data } from "./+data.js";
 
@@ -8,9 +8,9 @@ export default function Page() {
 
   return (
     <>
-      <header>
+      <Header>
         <h1>{books[0].authorFullname}</h1>
-      </header>
+      </Header>
       <BookList books={books} isAuthorPage />
     </>
   );

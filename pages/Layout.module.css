@@ -8,26 +8,34 @@
   flex: none;
 
   & > div {
-    display: flex;
-    flex-direction: column;
     padding: 1.5rem;
     position: sticky;
     top: 0;
   }
 
-  & a {
-    color: var(--text-color-2);
-    text-decoration: none;
-    padding: 0.25rem 0;
+  @media (width <= 40rem) {
+    display: none;
   }
 }
 
-.logo {
+.sidebarLogo {
   margin-bottom: 2.5rem;
 }
 
 .content {
-  & > div {
+  flex: 1 1 auto;
+
+  & > article {
     padding: 1.5rem;
+  }
+}
+
+.contentLogo {
+  display: none;
+  float: right;
+  padding: 1rem;
+
+  @media (width <= 40rem) {
+    display: block;
   }
 }

@@ -1,0 +1,33 @@
+.header {
+  @media (width <= 40rem) {
+    min-height: 2rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0 0 1.5rem;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    text-wrap: balance;
+  }
+
+  h1 {
+    color: var(--heading-color-1);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  h2 {
+    color: var(--heading-color-2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+}

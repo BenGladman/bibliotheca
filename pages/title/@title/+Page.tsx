@@ -1,5 +1,5 @@
 import { useData } from "vike-react/useData";
-import { Link, Quote } from "#components";
+import { Header, Link, Quote } from "#components";
 import styles from "./Page.module.css";
 
 import type { Data } from "./+data.js";
@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <>
-      <header>
+      <Header>
         <h1>{book.title}</h1>
         {book.subTitle && <h2>{book.subTitle}</h2>}
 
@@ -63,7 +63,7 @@ export default function Page() {
             </div>
           )}
         </dl>
-      </header>
+      </Header>
 
       <div dangerouslySetInnerHTML={{ __html: book.html }} />
 

@@ -5,10 +5,9 @@ export type Data = Awaited<ReturnType<typeof data>>;
 
 export async function data() {
   const config = useConfig();
+  const title = "Year Read";
 
-  config({
-    title: "Read",
-  });
+  config({ title });
 
   const books = await getBooks();
 
@@ -21,5 +20,5 @@ export async function data() {
     .toArray()
     .sort((a, b) => a.description.localeCompare(b.description));
 
-  return { reads };
+  return { title, reads };
 }

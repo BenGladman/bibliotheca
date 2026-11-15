@@ -1,5 +1,5 @@
 import { useData } from "vike-react/useData";
-import { BookList, Link } from "#components";
+import { BookList, Header, Link } from "#components";
 
 import type { Data } from "./+data.js";
 
@@ -8,12 +8,12 @@ export default function Page() {
 
   return (
     <>
-      <header>
+      <Header>
         <h1>{books[0].series}</h1>
         <h3>
           <Link href={books[0].authorUrl}>{books[0].authorFullname}</Link>
         </h3>
-      </header>
+      </Header>
       <BookList books={books} isAuthorPage />
     </>
   );
