@@ -2,7 +2,7 @@
 title: Jamaica Inn
 author: Du Maurier, Daphne
 published: 1936
-tags: Gothic
+tags: [Gothic, Historical]
 location: England
 read: 2026
 wikiPageId: 3291764

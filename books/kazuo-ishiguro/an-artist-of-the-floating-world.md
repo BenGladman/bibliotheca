@@ -1,6 +1,7 @@
 ---
 title: An Artist of the Floating World
 author: Ishiguro, Kazuo
+tags: Historical
 published: 1986
 read: 2022
 wikiPageId: 4111121

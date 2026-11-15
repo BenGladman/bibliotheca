@@ -2,6 +2,7 @@
 title: Instructions for a Heatwave
 author: O’Farrell, Maggie
 location: London
+tags: Historical
 published: 2013
 read: 2023
 googleBookId: 4cDIEAAAQBAJ

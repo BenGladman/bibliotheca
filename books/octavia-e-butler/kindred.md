@@ -2,7 +2,7 @@
 title: Kindred
 author: Butler, Octavia E.
 published: 1979
-tags: [Fantasy, Slavery]
+tags: [Fantasy, Slavery, Historical]
 location: America
 read: 2024
 wikiPageId: 4272994

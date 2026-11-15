@@ -2,7 +2,7 @@
 title: Parable of the Sower
 author: Butler, Octavia E.
 series: Earthseed
-tags: Post-Apocalyptic
+tags: [Post-Apocalyptic, Epistolary]
 location: America
 published: 1993
 read: 2024

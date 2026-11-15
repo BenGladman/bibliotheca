@@ -1,7 +1,7 @@
 ---
 title: Flowers for Algernon
 author: Keyes, Daniel
-tags: SciFi
+tags: [SciFi, Epistolary]
 location: New York
 published: 1966
 read: 2021

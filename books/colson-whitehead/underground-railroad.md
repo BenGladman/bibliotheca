@@ -1,7 +1,7 @@
 ---
 title: The Underground Railroad
 author: Whitehead, Colson
-tags: Slavery
+tags: [Slavery, Historical]
 location: America
 published: 2016
 read: 2022

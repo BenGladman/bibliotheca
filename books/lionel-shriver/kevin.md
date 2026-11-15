@@ -2,6 +2,7 @@
 title: We Need to Talk About Kevin
 author: Shriver, Lionel
 location: America
+tags: Epistolary
 published: 2003
 read: 2006
 wikiPageId: 4806475

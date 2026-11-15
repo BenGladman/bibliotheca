@@ -1,7 +1,7 @@
 ---
 title: Midnight’s Children
 author: Rushdie, Salman
-tags: Magical Realism
+tags: [Magical Realism, Historical]
 location: [India, Pakistan, Bangladesh]
 published: 1981
 read: 2023

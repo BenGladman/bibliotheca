@@ -2,6 +2,7 @@
 title: Amongst Women
 author: McGahern, John
 location: Ireland
+tags: Historical
 published: 1990
 read: 2023
 wikiPageId: 5731456

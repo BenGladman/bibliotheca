@@ -1,6 +1,7 @@
 ---
 title: Star of the Sea
 author: O’Connor, Joseph
+tags: Historical
 published: 2002
 read: 2023
 wikiPageId: 6218362
