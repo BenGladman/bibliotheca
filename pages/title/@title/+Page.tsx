@@ -1,5 +1,6 @@
 import { useData } from "vike-react/useData";
 import { Header, Link, Quote } from "#components";
+import { urlCase } from "#util";
 import styles from "./Page.module.css";
 
 import type { Data } from "./+data.js";
@@ -16,7 +17,9 @@ export default function Page() {
         <h3>
           <Link href={book.authorUrl}>{book.authorFullname}</Link>
           <span> (</span>
-          <Link href={book.decadeUrl}>{book.published}</Link>
+          <Link href={book.decadeUrl} hash={book.published}>
+            {book.published}
+          </Link>
           <span>)</span>
         </h3>
 
@@ -35,7 +38,9 @@ export default function Page() {
               <dt>Tags</dt>
               {book.tags.map((tag) => (
                 <dd key={tag.tag}>
-                  <Link href={tag.url}>{tag.tag}</Link>
+                  <Link href={tag.url} hash={urlCase(book.authorFullname)}>
+                    {tag.tag}
+                  </Link>
                 </dd>
               ))}
             </div>
@@ -46,7 +51,9 @@ export default function Page() {
               <dt>Location</dt>
               {book.locations.map((location) => (
                 <dd key={location.location}>
-                  <Link href={location.url}>{location.location}</Link>
+                  <Link href={location.url} hash={urlCase(book.authorFullname)}>
+                    {location.location}
+                  </Link>
                 </dd>
               ))}
             </div>

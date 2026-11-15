@@ -11,6 +11,7 @@ export default function Page() {
       <Header>
         <h1>{books[0].decadeDescription}</h1>
       </Header>
+
       <BookList books={books} isYearPage getSectionName={(b) => `${b.published}`} />
     </>
   );

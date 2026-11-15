@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { urlCase } from "#util";
 import styles from "./TableWithSections.module.css";
 
 interface TableWithSectionsProps<T> {
@@ -24,21 +25,25 @@ export function TableWithSections<T>({
 
   return (
     <table className={styles.table}>
-      {sections.map(([sectionName, sectionItems]) => (
-        <tbody key={sectionName}>
-          {sectionName && (
-            <tr key={sectionName}>
-              <th colSpan={3} aria-label={sectionName} id={sectionName}>
-                <a className={styles.sectionHead} href={`#${sectionName}`}>
-                  {sectionName}
-                </a>
-              </th>
-            </tr>
-          )}
+      {sections.map(([sectionName, sectionItems]) => {
+        const id = urlCase(sectionName);
 
-          {sectionItems.map((item) => children(item))}
-        </tbody>
-      ))}
+        return (
+          <tbody key={sectionName}>
+            {sectionName && (
+              <tr key={sectionName}>
+                <th colSpan={3} aria-label={sectionName} id={id}>
+                  <a className={styles.sectionHead} href={`#${id}`}>
+                    {sectionName}
+                  </a>
+                </th>
+              </tr>
+            )}
+
+            {sectionItems.map((item) => children(item))}
+          </tbody>
+        );
+      })}
     </table>
   );
 }

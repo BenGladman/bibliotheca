@@ -28,7 +28,9 @@ export function BookList({ books, isAuthorPage, isYearPage, getSectionName }: Bo
 
           {isYearPage ? null : (
             <td className="tabular-nums">
-              <Link href={book.decadeUrl}>{book.published}</Link>
+              <Link href={book.decadeUrl} hash={book.published}>
+                {book.published}
+              </Link>
             </td>
           )}
         </tr>

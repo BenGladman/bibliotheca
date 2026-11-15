@@ -11,7 +11,8 @@ export default function Page() {
       <Header>
         <h1>{title}</h1>
       </Header>
-      <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />;
+
+      <BookList books={books} getSectionName={(b) => b.titleFirstLetter} />
     </>
   );
 }

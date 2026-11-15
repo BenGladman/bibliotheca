@@ -1,5 +1,5 @@
 import { memoize } from "es-toolkit/function";
-import { kebabCase } from "es-toolkit/string";
+import { urlCase } from "./urlCase";
 
 import type { MarkdownModule } from "./MarkdownTypes";
 
@@ -97,14 +97,6 @@ function toArray<T>(value: T | T[] | undefined): T[] {
   }
 
   return [];
-}
-
-function urlCase(value: string) {
-  const lcValueWithDiacriticsRemoved = value
-    .normalize("NFD")
-    .toLowerCase()
-    .replace(/[^a-z1-9\- ]/gu, "");
-  return kebabCase(lcValueWithDiacriticsRemoved);
 }
 
 function sortName(value: string) {
