@@ -39,7 +39,7 @@ async function getBooksFn(): Promise<readonly Book[]> {
     const authorFullname = attributes.author.split(", ").reverse().join(" ");
 
     const decade3 = attributes.published.toString().slice(0, 3);
-    const decadeDescription = `Published ${decade3}0–${decade3}9`;
+    const decadeDescription = `Published ${decade3}0\u2060–\u2060${decade3}9`;
 
     return {
       title: attributes.title,
