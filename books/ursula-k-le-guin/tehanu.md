@@ -9,6 +9,8 @@ wikiPageId: 350754
 googleBookId: NJ8AVsov4dEC
 ---
 
-This is the best installment of Earthsea. There’s a dragon in it and a bit of enchantment, but the magic isn’t over the top. It follows directly on from [The Farthest Shore](the-farthest-shore). The main character is Tenar from [The Tombs of Atuan](the-tombs-of-atuan), who has been leading a regular life on a farm. Her husband has died, and she has adopted a girl who was burned and raped by her transient family nearby.
+This is the best installment of Earthsea. There’s a dragon in it and a bit of enchantment, but the magic isn’t over the top. It deals with female inequality, child abuse and rape.
+
+It follows directly on from [The Farthest Shore](the-farthest-shore). The main character is Tenar from [The Tombs of Atuan](the-tombs-of-atuan), who has been leading a regular life on a farm. She is widowed, and she has adopted a girl who was burned and raped by her transient family nearby.
 
 Ged returns but is near useless after his previous adventure. Tenar’s grown up son also appears later on, returned from life on the sea and causing family ructions.

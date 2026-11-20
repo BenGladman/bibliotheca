@@ -8,3 +8,5 @@ googleBookId: 0J7WEQAAQBAJ
 ---
 
 A woman explains her life and mental state which led to her leaving her husband and two children to live a hermit’s life on a remote smallholding. She simultaneously knows that she harmed her family by leaving, and also that this was the only course of action she could take.
+
+The tone is matter of fact, understated, often unemotional. The woman has suppressed her emotions or depression has flattened them. She knows her past but for her own survival must detach herself from it.
