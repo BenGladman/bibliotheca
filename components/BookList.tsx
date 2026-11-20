@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { FileTextIcon } from "lucide-react";
+import styles from "./BookList.module.css";
 import { Link } from "./Link";
 import { TableWithSections } from "./TableWithSections";
 
@@ -17,7 +18,10 @@ export function BookList({ books, isAuthorPage, isYearPage, getSectionName }: Bo
       {(book) => (
         <tr key={book.title}>
           <td>
-            <Link href={book.titleUrl}>{book.title}</Link>
+            <Link href={book.titleUrl}>
+              <span>{book.title}</span>
+              {book.html && <FileTextIcon className={styles.icon} />}
+            </Link>
           </td>
 
           {isAuthorPage ? null : (

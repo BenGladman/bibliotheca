@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "es-toolkit": "^1.52.0",
+    "lucide-react": "^1.77.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "vike": "^0.4.267",
